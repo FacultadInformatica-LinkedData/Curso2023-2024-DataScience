@@ -112,35 +112,33 @@ account_circle
 
 TASK 7.4: List the name of the persons who know Rocky
 
-[ ]
+[21]
+0 s
 # TO DO
 # Visualize the results
-query_str = """
+q4 = """
 SELECT ?personName
 WHERE {
-    ?person a ns:Person ; ns:knows
-    ?otherPerson .
-    ?otherPerson ns:name "Rocky" .
-    ?person ns:name ?personName .
+    ?personName foaf:knows ns:RockySmith.
 }
+"""
+for row in g.query(q4):
+  print(row)
+account_circle
+(rdflib.term.URIRef('http://somewhere#SaraJones'),)
+(rdflib.term.URIRef('http://somewhere#JaneSmith'),)
 
 Task 7.5: List the entities who know at least two other entities in the graph
 
-[ ]
-# TO DO
+[22]
+0 s
 # Visualize the results
-query_str = """
-SELECT ?entity ?knownEntities
-WHERE {
-    ?entity a ?class .
-    FILTER (?class = ns:Person || ?class = ns:Animal)
-    ?entity ns:knows ?knownEntity1 .
-    ?entity ns:knows ?knownEntity2 .
-    FILTER (STR(?knownEntity1) < STR(?knownEntity2))
-    BIND(CONCAT(STR(?knownEntity1), ", ", STR(?knownEntity2)) AS ?knownEntities)
-}
-"""
-q5 = prepareQuery(query_str, initNs={"ns": ns})
-results = g.query(q5)
-for row in results:
-  print(row)
+for r in g.query(q5):
+  print(r.sujeto)
+account_circle
+http://somewhere#RockySmith
+http://somewhere#SaraJones
+http://somewhere#RockySmith
+http://somewhere#JaneSmith
+http://somewhere#SaraJones
+http://somewhere#JaneSmith
