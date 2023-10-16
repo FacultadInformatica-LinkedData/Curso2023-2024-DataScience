@@ -1,0 +1,204 @@
+TASK 6.1: Create a new class named "University"
+
+[5]
+0 s
+# TO DO
+# Visualize the results
+ns = Namespace("http://somewhere#")
+g.add((ns.University, RDF.type, RDFS.Class))
+for s, p, o in g:
+  print(s,p,o)
+account_circle
+http://somewhere#JohnSmith http://www.w3.org/2001/vcard-rdf/3.0/Family Smith
+http://somewhere#SaraJones http://www.w3.org/2001/vcard-rdf/3.0/FN Sara Jones
+http://somewhere#SaraJones http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://somewhere#Person
+http://www.w3.org/2001/vcard-rdf/3.0/FN http://www.w3.org/2000/01/rdf-schema#range http://www.w3.org/2001/XMLSchema#string
+http://www.w3.org/2001/vcard-rdf/3.0/FN http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.w3.org/2000/01/rdf-schema#Datatype
+http://www.w3.org/2001/vcard-rdf/3.0/Family http://www.w3.org/2000/01/rdf-schema#range http://www.w3.org/2001/XMLSchema#string
+http://somewhere#JohnSmith http://www.w3.org/2001/vcard-rdf/3.0/FN John Smith
+http://www.w3.org/2001/vcard-rdf/3.0/Family http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.w3.org/2000/01/rdf-schema#Property
+http://somewhere#Researcher http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.w3.org/2000/01/rdf-schema#Class
+http://www.w3.org/2001/vcard-rdf/3.0/Given http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.w3.org/2000/01/rdf-schema#Datatype
+http://somewhere#Person http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.w3.org/2000/01/rdf-schema#Class
+http://somewhere#JohnSmith http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://somewhere#Person
+http://somewhere#SaraJones http://www.w3.org/2001/vcard-rdf/3.0/Family Jones
+http://somewhere#JohnSmith http://www.w3.org/2001/vcard-rdf/3.0/Given John
+http://somewhere#SaraJones http://www.w3.org/2001/vcard-rdf/3.0/Given Sara
+http://www.w3.org/2001/vcard-rdf/3.0/Given http://www.w3.org/2000/01/rdf-schema#range http://www.w3.org/2001/XMLSchema#string
+http://somewhere#University http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.w3.org/2000/01/rdf-schema#Class
+
+
+TASK 6.2: Add "Researcher" as a subclass of "Person"
+
+[10]
+0 s
+# TO DO
+# Visualize the results
+# Add "Researcher" as a subclass of "Person"
+g.add((ns.Researcher, RDFS.subClassOf, ns.Person))
+for s, p, o in g:
+  print(s,p,o)
+account_circle
+http://somewhere#JohnSmith http://www.w3.org/2001/vcard-rdf/3.0/Family Smith
+http://somewhere#SaraJones http://www.w3.org/2001/vcard-rdf/3.0/FN Sara Jones
+http://somewhere#SaraJones http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://somewhere#Person
+http://www.w3.org/2001/vcard-rdf/3.0/FN http://www.w3.org/2000/01/rdf-schema#range http://www.w3.org/2001/XMLSchema#string
+http://www.w3.org/2001/vcard-rdf/3.0/FN http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.w3.org/2000/01/rdf-schema#Datatype
+http://www.w3.org/2001/vcard-rdf/3.0/Family http://www.w3.org/2000/01/rdf-schema#range http://www.w3.org/2001/XMLSchema#string
+http://somewhere#JohnSmith http://www.w3.org/2001/vcard-rdf/3.0/FN John Smith
+http://www.w3.org/2001/vcard-rdf/3.0/Family http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.w3.org/2000/01/rdf-schema#Property
+http://somewhere#Researcher http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.w3.org/2000/01/rdf-schema#Class
+http://www.w3.org/2001/vcard-rdf/3.0/Given http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.w3.org/2000/01/rdf-schema#Datatype
+http://somewhere#Person http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.w3.org/2000/01/rdf-schema#Class
+http://somewhere#JohnSmith http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://somewhere#Person
+http://somewhere#SaraJones http://www.w3.org/2001/vcard-rdf/3.0/Family Jones
+http://somewhere#JohnSmith http://www.w3.org/2001/vcard-rdf/3.0/Given John
+http://somewhere#Researcher http://www.w3.org/2000/01/rdf-schema#subClassOf http://somewhere#Person
+http://somewhere#SaraJones http://www.w3.org/2001/vcard-rdf/3.0/Given Sara
+http://www.w3.org/2001/vcard-rdf/3.0/Given http://www.w3.org/2000/01/rdf-schema#range http://www.w3.org/2001/XMLSchema#string
+http://somewhere#University http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.w3.org/2000/01/rdf-schema#Class
+
+
+TASK 6.3: Create a new individual of Researcher named "Jane Smith"
+
+[11]
+# TO DO
+# Visualize the results
+jane_smith = ns.JaneSmith
+g.add((jane_smith, RDF.type, ns.Researcher))
+for s, p, o in g:
+  print(s,p,o)
+account_circle
+http://somewhere#JohnSmith http://www.w3.org/2001/vcard-rdf/3.0/Family Smith
+http://somewhere#SaraJones http://www.w3.org/2001/vcard-rdf/3.0/FN Sara Jones
+http://somewhere#SaraJones http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://somewhere#Person
+http://somewhere#JaneSmith http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://somewhere#Researcher
+http://www.w3.org/2001/vcard-rdf/3.0/FN http://www.w3.org/2000/01/rdf-schema#range http://www.w3.org/2001/XMLSchema#string
+http://www.w3.org/2001/vcard-rdf/3.0/FN http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.w3.org/2000/01/rdf-schema#Datatype
+http://www.w3.org/2001/vcard-rdf/3.0/Family http://www.w3.org/2000/01/rdf-schema#range http://www.w3.org/2001/XMLSchema#string
+http://somewhere#JohnSmith http://www.w3.org/2001/vcard-rdf/3.0/FN John Smith
+http://www.w3.org/2001/vcard-rdf/3.0/Family http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.w3.org/2000/01/rdf-schema#Property
+http://somewhere#Researcher http://www.w3.org/2000/01/rdf-schema#subClassOf http://somewhere#Person
+http://somewhere#Researcher http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.w3.org/2000/01/rdf-schema#Class
+http://www.w3.org/2001/vcard-rdf/3.0/Given http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.w3.org/2000/01/rdf-schema#Datatype
+http://somewhere#Person http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.w3.org/2000/01/rdf-schema#Class
+http://somewhere#JohnSmith http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://somewhere#Person
+http://somewhere#SaraJones http://www.w3.org/2001/vcard-rdf/3.0/Family Jones
+http://somewhere#JohnSmith http://www.w3.org/2001/vcard-rdf/3.0/Given John
+http://somewhere#SaraJones http://www.w3.org/2001/vcard-rdf/3.0/Given Sara
+http://www.w3.org/2001/vcard-rdf/3.0/Given http://www.w3.org/2000/01/rdf-schema#range http://www.w3.org/2001/XMLSchema#string
+http://somewhere#University http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.w3.org/2000/01/rdf-schema#Class
+
+
+
+TASK 6.4: Add to the individual JaneSmith the email address, fullName, given and family names
+
+[13]
+0 s
+# TO DO
+# Visualize the results
+g.add((jane_smith, ns.email, Literal("jane.smith@email.com")))
+g.add((jane_smith, ns.fullName, Literal("Jane Smith")))
+g.add((jane_smith, ns.givenName, Literal("Jane")))
+g.add((jane_smith, ns.familyName, Literal("Smith")))
+for s, p, o in g:
+  print(s,p,o)
+account_circle
+http://somewhere#JohnSmith http://www.w3.org/2001/vcard-rdf/3.0/Family Smith
+http://somewhere#SaraJones http://www.w3.org/2001/vcard-rdf/3.0/FN Sara Jones
+http://somewhere#SaraJones http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://somewhere#Person
+http://somewhere#JaneSmith http://somewhere#givenName Jane
+http://somewhere#JaneSmith http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://somewhere#Researcher
+http://www.w3.org/2001/vcard-rdf/3.0/FN http://www.w3.org/2000/01/rdf-schema#range http://www.w3.org/2001/XMLSchema#string
+http://somewhere#JaneSmith http://somewhere#email jane.smith@email.com
+http://www.w3.org/2001/vcard-rdf/3.0/FN http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.w3.org/2000/01/rdf-schema#Datatype
+http://www.w3.org/2001/vcard-rdf/3.0/Family http://www.w3.org/2000/01/rdf-schema#range http://www.w3.org/2001/XMLSchema#string
+http://somewhere#JohnSmith http://www.w3.org/2001/vcard-rdf/3.0/FN John Smith
+http://www.w3.org/2001/vcard-rdf/3.0/Family http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.w3.org/2000/01/rdf-schema#Property
+http://somewhere#JaneSmith http://somewhere#familyName Smith
+http://somewhere#Researcher http://www.w3.org/2000/01/rdf-schema#subClassOf http://somewhere#Person
+http://somewhere#Researcher http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.w3.org/2000/01/rdf-schema#Class
+http://www.w3.org/2001/vcard-rdf/3.0/Given http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.w3.org/2000/01/rdf-schema#Datatype
+http://somewhere#Person http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.w3.org/2000/01/rdf-schema#Class
+http://somewhere#JohnSmith http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://somewhere#Person
+http://somewhere#JaneSmith http://somewhere#fullName Jane Smith
+http://somewhere#SaraJones http://www.w3.org/2001/vcard-rdf/3.0/Family Jones
+http://somewhere#JohnSmith http://www.w3.org/2001/vcard-rdf/3.0/Given John
+http://somewhere#SaraJones http://www.w3.org/2001/vcard-rdf/3.0/Given Sara
+http://www.w3.org/2001/vcard-rdf/3.0/Given http://www.w3.org/2000/01/rdf-schema#range http://www.w3.org/2001/XMLSchema#string
+http://somewhere#University http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.w3.org/2000/01/rdf-schema#Class
+
+
+
+TASK 6.5: Add UPM as the university where John Smith works
+
+[14]
+0 s
+# TO DO
+# Visualize the results
+g.add((jane_smith, ns.worksAt, ns.UPM))
+for s, p, o in g:
+  print(s,p,o)
+account_circle
+http://somewhere#JohnSmith http://www.w3.org/2001/vcard-rdf/3.0/Family Smith
+http://somewhere#SaraJones http://www.w3.org/2001/vcard-rdf/3.0/FN Sara Jones
+http://somewhere#JaneSmith http://somewhere#worksAt http://somewhere#UPM
+http://somewhere#SaraJones http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://somewhere#Person
+http://somewhere#JaneSmith http://somewhere#givenName Jane
+http://somewhere#JaneSmith http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://somewhere#Researcher
+http://www.w3.org/2001/vcard-rdf/3.0/FN http://www.w3.org/2000/01/rdf-schema#range http://www.w3.org/2001/XMLSchema#string
+http://somewhere#JaneSmith http://somewhere#email jane.smith@email.com
+http://www.w3.org/2001/vcard-rdf/3.0/FN http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.w3.org/2000/01/rdf-schema#Datatype
+http://www.w3.org/2001/vcard-rdf/3.0/Family http://www.w3.org/2000/01/rdf-schema#range http://www.w3.org/2001/XMLSchema#string
+http://somewhere#JohnSmith http://www.w3.org/2001/vcard-rdf/3.0/FN John Smith
+http://www.w3.org/2001/vcard-rdf/3.0/Family http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.w3.org/2000/01/rdf-schema#Property
+http://somewhere#JaneSmith http://somewhere#familyName Smith
+http://somewhere#Researcher http://www.w3.org/2000/01/rdf-schema#subClassOf http://somewhere#Person
+http://somewhere#Researcher http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.w3.org/2000/01/rdf-schema#Class
+http://www.w3.org/2001/vcard-rdf/3.0/Given http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.w3.org/2000/01/rdf-schema#Datatype
+http://somewhere#Person http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.w3.org/2000/01/rdf-schema#Class
+http://somewhere#JohnSmith http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://somewhere#Person
+http://somewhere#JaneSmith http://somewhere#fullName Jane Smith
+http://somewhere#SaraJones http://www.w3.org/2001/vcard-rdf/3.0/Family Jones
+http://somewhere#JohnSmith http://www.w3.org/2001/vcard-rdf/3.0/Given John
+http://somewhere#SaraJones http://www.w3.org/2001/vcard-rdf/3.0/Given Sara
+http://www.w3.org/2001/vcard-rdf/3.0/Given http://www.w3.org/2000/01/rdf-schema#range http://www.w3.org/2001/XMLSchema#string
+http://somewhere#University http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.w3.org/2000/01/rdf-schema#Class
+
+
+
+Task 6.6: Add that Jown knows Jane using the FOAF vocabulary
+
+[15]
+0 s
+# TO DO
+# Visualize the results
+g.add((ns.JohnSmith, ns.knows, jane_smith))
+for s, p, o in g:
+  print(s,p,o)
+account_circle
+http://somewhere#JohnSmith http://www.w3.org/2001/vcard-rdf/3.0/Family Smith
+http://somewhere#SaraJones http://www.w3.org/2001/vcard-rdf/3.0/FN Sara Jones
+http://somewhere#JaneSmith http://somewhere#worksAt http://somewhere#UPM
+http://somewhere#SaraJones http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://somewhere#Person
+http://somewhere#JaneSmith http://somewhere#givenName Jane
+http://somewhere#JaneSmith http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://somewhere#Researcher
+http://www.w3.org/2001/vcard-rdf/3.0/FN http://www.w3.org/2000/01/rdf-schema#range http://www.w3.org/2001/XMLSchema#string
+http://somewhere#JaneSmith http://somewhere#email jane.smith@email.com
+http://somewhere#JohnSmith http://somewhere#knows http://somewhere#JaneSmith
+http://www.w3.org/2001/vcard-rdf/3.0/FN http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.w3.org/2000/01/rdf-schema#Datatype
+http://www.w3.org/2001/vcard-rdf/3.0/Family http://www.w3.org/2000/01/rdf-schema#range http://www.w3.org/2001/XMLSchema#string
+http://somewhere#JohnSmith http://www.w3.org/2001/vcard-rdf/3.0/FN John Smith
+http://www.w3.org/2001/vcard-rdf/3.0/Family http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.w3.org/2000/01/rdf-schema#Property
+http://somewhere#JaneSmith http://somewhere#familyName Smith
+http://somewhere#Researcher http://www.w3.org/2000/01/rdf-schema#subClassOf http://somewhere#Person
+http://somewhere#Researcher http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.w3.org/2000/01/rdf-schema#Class
+http://www.w3.org/2001/vcard-rdf/3.0/Given http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.w3.org/2000/01/rdf-schema#Datatype
+http://somewhere#Person http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.w3.org/2000/01/rdf-schema#Class
+http://somewhere#JohnSmith http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://somewhere#Person
+http://somewhere#JaneSmith http://somewhere#fullName Jane Smith
+http://somewhere#SaraJones http://www.w3.org/2001/vcard-rdf/3.0/Family Jones
+http://somewhere#JohnSmith http://www.w3.org/2001/vcard-rdf/3.0/Given John
+http://somewhere#SaraJones http://www.w3.org/2001/vcard-rdf/3.0/Given Sara
+http://www.w3.org/2001/vcard-rdf/3.0/Given http://www.w3.org/2000/01/rdf-schema#range http://www.w3.org/2001/XMLSchema#string
+http://somewhere#University http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.w3.org/2000/01/rdf-schema#Class
