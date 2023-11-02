@@ -1,0 +1,144 @@
+Task 07: Querying RDF(s)
+
+[ ]
+!pip install rdflib
+github_storage = "https://raw.githubusercontent.com/FacultadInformatica-LinkedData/Curso2023-2024/master/Assignment4/course_materials"
+account_circle
+Collecting rdflib
+  Downloading rdflib-7.0.0-py3-none-any.whl (531 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 531.9/531.9 kB 7.3 MB/s eta 0:00:00
+Collecting isodate<0.7.0,>=0.6.0 (from rdflib)
+  Downloading isodate-0.6.1-py2.py3-none-any.whl (41 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 41.7/41.7 kB 4.7 MB/s eta 0:00:00
+Requirement already satisfied: pyparsing<4,>=2.1.0 in /usr/local/lib/python3.10/dist-packages (from rdflib) (3.1.1)
+Requirement already satisfied: six in /usr/local/lib/python3.10/dist-packages (from isodate<0.7.0,>=0.6.0->rdflib) (1.16.0)
+Installing collected packages: isodate, rdflib
+Successfully installed isodate-0.6.1 rdflib-7.0.0
+First let's read the RDF file
+
+[ ]
+from rdflib import Graph, Namespace, Literal
+from rdflib.namespace import RDF, RDFS
+g = Graph()
+g.namespace_manager.bind('ns', Namespace("http://somewhere#"), override=False)
+g.namespace_manager.bind('vcard', Namespace("http://www.w3.org/2001/vcard-rdf/3.0#"), override=False)
+g.parse(github_storage+"/rdf/example6.rdf", format="xml")
+account_circle
+<Graph identifier=N1404d820b5db47e5a968d3e63310fc8a (<class 'rdflib.graph.Graph'>)>
+
+
+TASK 7.1: List all subclasses of "LivingThing" with RDFLib and SPARQL
+
+[ ]
+# TO DO
+# Visualize the results
+
+#for r in g.query(q1):
+#  print(r)
+from rdflib.plugins.sparql import prepareQuery
+ns = Namespace("http://somewhere#")
+query_str = """
+SELECT ?subclass
+WHERE {
+    ?subclass rdfs:subClassOf ns:LivingThing .
+}
+"""
+q1 = prepareQuery(query_str, initNs={"ns": ns, "rdfs": RDFS})
+results = g.query(q1)
+for row in results:
+  print(row)
+account_circle
+(rdflib.term.URIRef('http://somewhere#Person'),)
+(rdflib.term.URIRef('http://somewhere#Animal'),)
+
+
+TASK 7.2: List all individuals of "Person" with RDFLib and SPARQL (remember the subClasses)
+
+[ ]
+# TO DO
+# Visualize the results
+query_str = """
+SELECT ?person
+WHERE {
+    ?person a/rdfs:subClassOf* ns:Person .
+}
+"""
+q2 = prepareQuery(query_str, initNs={"ns": ns, "rdfs": RDFS})
+results = g.query(q2)
+for row in results:
+  print(row)
+account_circle
+(rdflib.term.URIRef('http://somewhere#SaraJones'),)
+(rdflib.term.URIRef('http://somewhere#JohnSmith'),)
+(rdflib.term.URIRef('http://somewhere#JaneSmith'),)
+(rdflib.term.URIRef('http://somewhere#JimGonzalez'),)
+
+
+TASK 7.3: List all individuals of "Person" or "Animal" and all their properties including their class with RDFLib and SPARQL. You do not need to list the individuals of the subclasses of person
+
+[ ]
+# TO DO
+# Visualize the results
+query_str = """
+SELECT ?individual ?property ?value ?class
+WHERE {
+    ?individual a ?class .
+    FILTER (?class = ns:Person || ?class = ns:Animal)
+    ?individual ?property ?value .
+}
+"""
+q3 = prepareQuery(query_str, initNs={"ns": ns})
+results = g.query(q3)
+for row in results:
+  print(row)
+account_circle
+(rdflib.term.URIRef('http://somewhere#RockySmith'), rdflib.term.URIRef('http://www.w3.org/1999/02/22-rdf-syntax-ns#type'), rdflib.term.URIRef('http://somewhere#Animal'), rdflib.term.URIRef('http://somewhere#Animal'))
+(rdflib.term.URIRef('http://somewhere#RockySmith'), rdflib.term.URIRef('http://www.w3.org/2001/vcard-rdf/3.0/Given'), rdflib.term.Literal('Rocky', datatype=rdflib.term.URIRef('http://www.w3.org/2001/XMLSchema#string')), rdflib.term.URIRef('http://somewhere#Animal'))
+(rdflib.term.URIRef('http://somewhere#RockySmith'), rdflib.term.URIRef('http://www.w3.org/2001/vcard-rdf/3.0/FN'), rdflib.term.Literal('Rocky Smith', datatype=rdflib.term.URIRef('http://www.w3.org/2001/XMLSchema#string')), rdflib.term.URIRef('http://somewhere#Animal'))
+(rdflib.term.URIRef('http://somewhere#RockySmith'), rdflib.term.URIRef('http://www.w3.org/2001/vcard-rdf/3.0/Family'), rdflib.term.Literal('Smith', datatype=rdflib.term.URIRef('http://www.w3.org/2001/XMLSchema#string')), rdflib.term.URIRef('http://somewhere#Animal'))
+(rdflib.term.URIRef('http://somewhere#RockySmith'), rdflib.term.URIRef('http://xmlns.com/foaf/0.1/knows'), rdflib.term.URIRef('http://somewhere#JaneSmith'), rdflib.term.URIRef('http://somewhere#Animal'))
+(rdflib.term.URIRef('http://somewhere#RockySmith'), rdflib.term.URIRef('http://xmlns.com/foaf/0.1/knows'), rdflib.term.URIRef('http://somewhere#SaraJones'), rdflib.term.URIRef('http://somewhere#Animal'))
+(rdflib.term.URIRef('http://somewhere#SaraJones'), rdflib.term.URIRef('http://www.w3.org/1999/02/22-rdf-syntax-ns#type'), rdflib.term.URIRef('http://somewhere#Person'), rdflib.term.URIRef('http://somewhere#Person'))
+(rdflib.term.URIRef('http://somewhere#SaraJones'), rdflib.term.URIRef('http://www.w3.org/2001/vcard-rdf/3.0/Given'), rdflib.term.Literal('Sara', datatype=rdflib.term.URIRef('http://www.w3.org/2001/XMLSchema#string')), rdflib.term.URIRef('http://somewhere#Person'))
+(rdflib.term.URIRef('http://somewhere#SaraJones'), rdflib.term.URIRef('http://www.w3.org/2001/vcard-rdf/3.0/FN'), rdflib.term.Literal('Sara Jones', datatype=rdflib.term.URIRef('http://www.w3.org/2001/XMLSchema#string')), rdflib.term.URIRef('http://somewhere#Person'))
+(rdflib.term.URIRef('http://somewhere#SaraJones'), rdflib.term.URIRef('http://www.w3.org/2001/vcard-rdf/3.0/Family'), rdflib.term.Literal('Jones', datatype=rdflib.term.URIRef('http://www.w3.org/2001/XMLSchema#string')), rdflib.term.URIRef('http://somewhere#Person'))
+(rdflib.term.URIRef('http://somewhere#SaraJones'), rdflib.term.URIRef('http://xmlns.com/foaf/0.1/knows'), rdflib.term.URIRef('http://somewhere#RockySmith'), rdflib.term.URIRef('http://somewhere#Person'))
+(rdflib.term.URIRef('http://somewhere#SaraJones'), rdflib.term.URIRef('http://xmlns.com/foaf/0.1/knows'), rdflib.term.URIRef('http://somewhere#JaneSmith'), rdflib.term.URIRef('http://somewhere#Person'))
+(rdflib.term.URIRef('http://somewhere#JohnSmith'), rdflib.term.URIRef('http://www.w3.org/1999/02/22-rdf-syntax-ns#type'), rdflib.term.URIRef('http://somewhere#Person'), rdflib.term.URIRef('http://somewhere#Person'))
+(rdflib.term.URIRef('http://somewhere#JohnSmith'), rdflib.term.URIRef('http://www.w3.org/2001/vcard-rdf/3.0/Given'), rdflib.term.Literal('John', datatype=rdflib.term.URIRef('http://www.w3.org/2001/XMLSchema#string')), rdflib.term.URIRef('http://somewhere#Person'))
+(rdflib.term.URIRef('http://somewhere#JohnSmith'), rdflib.term.URIRef('http://www.w3.org/2001/vcard-rdf/3.0/FN'), rdflib.term.Literal('John Smith', datatype=rdflib.term.URIRef('http://www.w3.org/2001/XMLSchema#string')), rdflib.term.URIRef('http://somewhere#Person'))
+(rdflib.term.URIRef('http://somewhere#JohnSmith'), rdflib.term.URIRef('http://www.w3.org/2001/vcard-rdf/3.0/Family'), rdflib.term.Literal('Smith', datatype=rdflib.term.URIRef('http://www.w3.org/2001/XMLSchema#string')), rdflib.term.URIRef('http://somewhere#Person'))
+
+
+TASK 7.4: List the name of the persons who know Rocky
+
+[21]
+0 s
+# TO DO
+# Visualize the results
+q4 = """
+SELECT ?personName
+WHERE {
+    ?personName foaf:knows ns:RockySmith.
+}
+"""
+for row in g.query(q4):
+  print(row)
+account_circle
+(rdflib.term.URIRef('http://somewhere#SaraJones'),)
+(rdflib.term.URIRef('http://somewhere#JaneSmith'),)
+
+Task 7.5: List the entities who know at least two other entities in the graph
+
+[22]
+0 s
+# Visualize the results
+for r in g.query(q5):
+  print(r.sujeto)
+account_circle
+http://somewhere#RockySmith
+http://somewhere#SaraJones
+http://somewhere#RockySmith
+http://somewhere#JaneSmith
+http://somewhere#SaraJones
+http://somewhere#JaneSmith
