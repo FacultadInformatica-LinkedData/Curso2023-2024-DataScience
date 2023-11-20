@@ -84,8 +84,8 @@ SELECT ?personName
 WHERE {
     ?person a ns:Person ;
             ns:knows ?otherPerson .
-    ?otherPerson ns:name "Rocky" .
-    ?person ns:name ?personName .
+    ?otherPerson ns:Given "Rocky" .
+    ?person ns:Given ?personName .
 }
 """
 
