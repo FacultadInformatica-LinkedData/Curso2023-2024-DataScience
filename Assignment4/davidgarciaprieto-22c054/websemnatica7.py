@@ -16,10 +16,20 @@ query = prepareQuery("""
     }
 """)
 
+#rdflib
+ns = Namespace("http://somewhere#")
+for s,p,o in g.triples((None, RDFS.subClassOf, ns.living)):
+    print(s)
 # Execute the query and print the results
 for row in g.query(query):
     print(row.subclass)
 #2
+#rdflib
+for s,p,o in g.triples((None, RDF.type, ns.Person)):
+  print(s)
+for s,p,o in g.triples((None, RDFS.subClassOf, ns.Person)):
+  for s1,p1,o1 in g.triples((None, RDF.type, s)):
+    print(s1)
 q2 = prepareQuery("""
     SELECT ?individual
     WHERE {
@@ -31,6 +41,14 @@ q2 = prepareQuery("""
 for row in g.query(q2):
     print(row.individual)
 #3
+#rdflib
+types_to_search = [ns.Person, ns.Animal]
+
+for t in types_to_search:
+    for s, p, o in g.triples((None, RDF.type, t)):
+        for s1, p1, o1 in g.triples((s, None, None)):
+            print(s1, p1, o1)
+
 # Define the SPARQL query
 query = prepareQuery("""
     SELECT ?individual ?property ?value
