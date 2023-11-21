@@ -1,0 +1,467 @@
+[
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Taula 1.03.18 Bizi diren zonan gauez bakarrik ibiltzean seguru sentitzen diren 16 urteko eta gehiagoko pertsonen proportzioa lurralde historikoaren sexuaren eta urtearen arabera. Euskadiko Autonomia Erkidegoa. 2014, 2017-2020.%",
+    "newColumnName": "Proporción de personas mayores de 16 que se sienten seguras caminando de noche por su zona",
+    "description": "Rename column Taula 1.03.18 Bizi diren zonan gauez bakarrik ibiltzean seguru sentitzen diren 16 urteko eta gehiagoko pertsonen proportzioa lurralde historikoaren sexuaren eta urtearen arabera. Euskadiko Autonomia Erkidegoa. 2014, 2017-2020.% to Proporción de personas mayores de 16 que se sienten seguras caminando de noche por su zona"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Proporción de personas mayores de 16 que se sienten seguras caminando de noche por su zona",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "     Guztira"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Total"
+      }
+    ],
+    "description": "Mass edit cells in column Proporción de personas mayores de 16 que se sienten seguras caminando de noche por su zona"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Proporción de personas mayores de 16 que se sienten seguras caminando de noche por su zona",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "     Emakumeak"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Mujeres"
+      }
+    ],
+    "description": "Mass edit cells in column Proporción de personas mayores de 16 que se sienten seguras caminando de noche por su zona"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Proporción de personas mayores de 16 que se sienten seguras caminando de noche por su zona",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "     Gizonak"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Hombres"
+      }
+    ],
+    "description": "Mass edit cells in column Proporción de personas mayores de 16 que se sienten seguras caminando de noche por su zona"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Proporción de personas mayores de 16 que se sienten seguras caminando de noche por su zona",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Iturria:"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Fuente:"
+      }
+    ],
+    "description": "Mass edit cells in column Proporción de personas mayores de 16 que se sienten seguras caminando de noche por su zona"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Column",
+    "description": "Remove column Column"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Column2",
+    "description": "Remove column Column2"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Column3",
+    "description": "Remove column Column3"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Column4",
+    "description": "Remove column Column4"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Column8",
+    "description": "Remove column Column8"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Column9",
+    "description": "Remove column Column9"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Column10",
+    "description": "Remove column Column10"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Column11",
+    "description": "Remove column Column11"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Column12",
+    "description": "Remove column Column12"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Column13",
+    "description": "Remove column Column13"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Column14",
+    "description": "Remove column Column14"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Column15",
+    "description": "Remove column Column15"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Column16",
+    "description": "Remove column Column16"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Column17",
+    "description": "Remove column Column17"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Column18",
+    "description": "Remove column Column18"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Column19",
+    "description": "Remove column Column19"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Column20",
+    "description": "Remove column Column20"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Column21",
+    "description": "Remove column Column21"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Column22",
+    "description": "Remove column Column22"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Column23",
+    "description": "Remove column Column23"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Column24",
+    "description": "Remove column Column24"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Column25",
+    "description": "Remove column Column25"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Column26",
+    "description": "Remove column Column26"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Column27",
+    "description": "Remove column Column27"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Column28",
+    "description": "Remove column Column28"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Proporción de personas mayores de 16 que se sienten seguras caminando de noche por su zona",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Proporción de personas mayores de 16 que se sienten seguras caminando de noche por su zona using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Column7",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Column7 using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Column5",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Column5 using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Column6",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Column6 using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Column5",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Column5 using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Column5",
+    "expression": "grel:value.replace(\",\",\".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Column5 using expression grel:value.replace(\",\",\".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Column7",
+    "expression": "grel:value.replace(\",\",\".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Column7 using expression grel:value.replace(\",\",\".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Column6",
+    "expression": "grel:value.replace(\",\",\".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Column6 using expression grel:value.replace(\",\",\".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Column5",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Column5 using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Column5",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Column5 using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Column7",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Column7 using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Column6",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Column6 using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Proporción de personas mayores de 16 que se sienten seguras caminando de noche por su zona",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Proporción de personas mayores de 16 que se sienten seguras caminando de noche por su zona using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Column7",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Column7 using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Column5",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Column5 using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Column6",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Column6 using expression value.trim()"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Blank Rows",
+          "expression": "(filter(row.columnNames,cn,isNonBlank(cells[cn].value)).length()==0).toString()",
+          "columnName": "",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "true",
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Column5",
+    "newColumnName": "2018",
+    "description": "Rename column Column5 to 2018"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Column6",
+    "newColumnName": "2019",
+    "description": "Rename column Column6 to 2019"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Column7",
+    "newColumnName": "2020",
+    "description": "Rename column Column7 to 2020"
+  }
+]

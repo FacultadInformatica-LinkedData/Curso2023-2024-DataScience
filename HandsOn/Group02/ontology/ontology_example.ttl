@@ -1,0 +1,91 @@
+ @prefix : <https://vascomap.com/> .
+@prefix dbo: <https://dbpedia.org/ontology/> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix ns: <https://vascomap.com/ontology/class/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prop: <https://vascomap.com/ontology/properties/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix wd: <https://www.wikidata.org/wiki/> .
+
+dbo:Male a owl:Class ;
+    rdfs:label "Male" ;
+    rdfs:subClassOf dbo:Person .
+
+: a owl:Ontology ;
+    mod:createdWith <https://chowlk.linkeddata.es/> .
+
+ns:20400 a owl:NamedIndividual .
+
+ns:OscarCorcho a owl:NamedIndividual,
+        dbo:Person,
+        dbo:PoliceOfficer ;
+    prop:conforms ns:1.38 .
+
+ns:SanSebastián a owl:NamedIndividual,
+        ns:Municipality ;
+    prop:belongsTo ns:Gipuzkoa ;
+    prop:has ns:1.38,
+        ns:29.63,
+        ns:64 .
+
+ns:coderange a owl:Class ;
+    rdfs:label "coderange" .
+
+prop:belongsTo a owl:ObjectProperty ;
+    rdfs:label "belongs to" .
+
+prop:conforms a owl:ObjectProperty ;
+    rdfs:label "conforms" .
+
+prop:has a owl:ObjectProperty ;
+    rdfs:label "has" .
+
+prop:livesIn a owl:ObjectProperty ;
+    rdfs:label "lives in" ;
+    rdfs:domain dbo:Person .
+
+prop:throughout a owl:ObjectProperty ;
+    rdfs:label "throughout" .
+
+dbo:PoliceOfficer a owl:Class ;
+    rdfs:label "Police Officer" .
+
+dbo:Year a owl:Class ;
+    rdfs:label "Year" .
+
+ns:29.63 a owl:NamedIndividual,
+        ns:CrimeIndex ;
+    prop:throughout wd:Q25337 .
+
+ns:64 a owl:NamedIndividual,
+        ns:SecurityIndex ;
+    prop:throughout wd:Q25337 .
+
+ns:CrimeIndex a owl:Class ;
+    rdfs:label "Crime Index" .
+
+ns:Gipuzkoa a owl:NamedIndividual,
+        ns:Province .
+
+ns:Municipality a owl:Class ;
+    rdfs:label "Municipality" .
+
+ns:PoliceStaff a owl:Class ;
+    rdfs:label "Police Staff" .
+
+ns:Province a owl:Class ;
+    rdfs:label "Province" .
+
+ns:SecurityIndex a owl:Class ;
+    rdfs:label "Security Index" .
+
+ns:1.38 a owl:NamedIndividual,
+        ns:PoliceStaff ;
+    prop:throughout wd:Q25337 .
+
+dbo:Person a owl:Class ;
+    rdfs:label "Person" .
+
+wd:Q25337 a owl:NamedIndividual,
+        dbo:Year .
+

@@ -1,0 +1,403 @@
+[
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "count_start_date",
+    "expression": "value.toDate()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column count_start_date using expression value.toDate()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "count_end_date",
+    "expression": "value.toDate()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column count_end_date using expression value.toDate()"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "timerange",
+          "name": "count_end_date",
+          "expression": "value",
+          "columnName": "count_end_date",
+          "from": 1529539200000,
+          "to": 1626652800000,
+          "selectTime": false,
+          "selectNonTime": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "average_daily_car_traffic",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column average_daily_car_traffic using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "median_speed",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column median_speed using expression value.toNumber()"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "average_daily_car_traffic",
+          "expression": "value",
+          "columnName": "average_daily_car_traffic",
+          "from": 0,
+          "to": 17000,
+          "selectNumeric": false,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        },
+        {
+          "type": "range",
+          "name": "median_speed",
+          "expression": "value",
+          "columnName": "median_speed",
+          "from": 14,
+          "to": 44,
+          "selectNumeric": false,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "average_daily_car_traffic",
+          "expression": "value",
+          "columnName": "average_daily_car_traffic",
+          "from": 0,
+          "to": 17000,
+          "selectNumeric": false,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ward",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column ward using expression value.toNumber()"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "ward",
+          "expression": "value",
+          "columnName": "ward",
+          "from": 1,
+          "to": 33,
+          "selectNumeric": false,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "median_speed",
+          "expression": "value",
+          "columnName": "median_speed",
+          "from": 14,
+          "to": 44,
+          "selectNumeric": false,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "percent_over_limit",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column percent_over_limit using expression value.toNumber()"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "percent_over_limit",
+          "expression": "value",
+          "columnName": "percent_over_limit",
+          "from": 0,
+          "to": 99,
+          "selectNumeric": false,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "average_daily_bike_traffic",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column average_daily_bike_traffic using expression value.toNumber()"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "average_daily_bike_traffic",
+    "description": "Remove column average_daily_bike_traffic"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "count_start_date",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column count_start_date using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "count_start_date",
+    "expression": "value.toString()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column count_start_date using expression value.toString()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "count_end_date",
+    "expression": "value.toString()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column count_end_date using expression value.toString()"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "count_start_date",
+    "expression": "grel:value[0,4]",
+    "onError": "set-to-blank",
+    "newColumnName": "Year",
+    "columnInsertIndex": 5,
+    "description": "Create column Year at index 5 based on column count_start_date using expression grel:value[0,4]"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Year",
+    "newColumnName": "Year_star",
+    "description": "Rename column Year to Year_star"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "count_start_date",
+    "expression": "grel:value[5,7]",
+    "onError": "set-to-blank",
+    "newColumnName": "Month_star",
+    "columnInsertIndex": 5,
+    "description": "Create column Month_star at index 5 based on column count_start_date using expression grel:value[5,7]"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Year_star",
+    "newColumnName": "Year_start",
+    "description": "Rename column Year_star to Year_start"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Month_star",
+    "newColumnName": "Month_start",
+    "description": "Rename column Month_star to Month_start"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "count_start_date",
+    "expression": "grel:value[8,10]",
+    "onError": "set-to-blank",
+    "newColumnName": "Day_start",
+    "columnInsertIndex": 5,
+    "description": "Create column Day_start at index 5 based on column count_start_date using expression grel:value[8,10]"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "count_end_date",
+    "expression": "grel:value[0,4]",
+    "onError": "set-to-blank",
+    "newColumnName": "Year_end",
+    "columnInsertIndex": 9,
+    "description": "Create column Year_end at index 9 based on column count_end_date using expression grel:value[0,4]"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "count_end_date",
+    "expression": "grel:value[5,7]",
+    "onError": "set-to-blank",
+    "newColumnName": "Month_end",
+    "columnInsertIndex": 9,
+    "description": "Create column Month_end at index 9 based on column count_end_date using expression grel:value[5,7]"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "count_end_date",
+    "expression": "grel:value[8,10]",
+    "onError": "set-to-blank",
+    "newColumnName": "DA",
+    "columnInsertIndex": 9,
+    "description": "Create column DA at index 9 based on column count_end_date using expression grel:value[8,10]"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "DA",
+    "newColumnName": "Day_end",
+    "description": "Rename column DA to Day_end"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "speed_limit",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column speed_limit using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "speed_limit",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column speed_limit using expression value.toNumber()"
+  }
+]

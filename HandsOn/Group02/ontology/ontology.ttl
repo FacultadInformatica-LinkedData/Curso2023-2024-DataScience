@@ -1,0 +1,82 @@
+ @prefix : <https://vascomap.com/> .
+@prefix dbo: <https://dbpedia.org/ontology/> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix ns: <https://vascomap.com/ontology/class/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prop: <https://vascomap.com/ontology/properties/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+dbo:Female a owl:Class ;
+    rdfs:label "Female" ;
+    rdfs:subClassOf dbo:Person .
+
+dbo:Male a owl:Class ;
+    rdfs:label "Male" ;
+    rdfs:subClassOf dbo:Person .
+
+: a owl:Ontology ;
+    mod:createdWith <https://chowlk.linkeddata.es/> .
+
+prop:code a owl:DatatypeProperty ;
+    rdfs:label "code" ;
+    rdfs:domain ns:Municipality .
+
+prop:conforms a owl:ObjectProperty ;
+    rdfs:label "conforms" ;
+    rdfs:domain dbo:PoliceOfficer ;
+    rdfs:range ns:PoliceStaff .
+
+prop:has a owl:ObjectProperty ;
+    rdfs:label "has" ;
+    rdfs:domain ns:Municipality ;
+    rdfs:range ns:CrimeIndex,
+        ns:PoliceStaff,
+        ns:SecurityIndex .
+
+prop:livesIn a owl:ObjectProperty ;
+    rdfs:label "lives in" ;
+    rdfs:domain dbo:Person ;
+    rdfs:range ns:Municipality .
+
+prop:throughout a owl:ObjectProperty ;
+    rdfs:label "throughout" ;
+    rdfs:domain ns:CrimeIndex,
+        ns:PoliceStaff,
+        ns:SecurityIndex ;
+    rdfs:range dbo:Year .
+
+prop:value a owl:DatatypeProperty ;
+    rdfs:label "value" ;
+    rdfs:domain ns:CrimeIndex,
+        ns:PoliceStaff,
+        ns:SecurityIndex .
+
+<https://vascomap.com/prop;belongsTo> a owl:ObjectProperty ;
+    rdfs:label "prop;belongs to" ;
+    rdfs:domain ns:Municipality ;
+    rdfs:range ns:Province .
+
+dbo:PoliceOfficer a owl:Class ;
+    rdfs:label "Police Officer" .
+
+dbo:Year a owl:Class ;
+    rdfs:label "Year" .
+
+ns:Province a owl:Class ;
+    rdfs:label "Province" .
+
+dbo:Person a owl:Class ;
+    rdfs:label "Person" .
+
+ns:CrimeIndex a owl:Class ;
+    rdfs:label "Crime Index" .
+
+ns:SecurityIndex a owl:Class ;
+    rdfs:label "Security Index" .
+
+ns:Municipality a owl:Class ;
+    rdfs:label "Municipality" .
+
+ns:PoliceStaff a owl:Class ;
+    rdfs:label "Police Staff" .
+
