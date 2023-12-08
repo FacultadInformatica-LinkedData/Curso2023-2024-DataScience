@@ -5,6 +5,7 @@
 @prefix ql: <http://semweb.mmlab.be/ns/ql#> .
 @prefix map: <http://mapping.example.com/> .
 @prefix ma: <http://www.w3.org/ns/ma-ont#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
@@ -18,13 +19,13 @@
 map:map_District_000 rml:logicalSource map:source_001 ;
 	rdf:type rr:TriplesMap ;
 	rdfs:label "District" ;
-	rr:predicateObjectMap map:pom_005, map:pom_006 ;
+	rr:predicateObjectMap map:pom_006, map:pom_007, map:pom_008 ;
 	rr:subjectMap map:s_001 .
 
 map:map_Thoroughfare_000 rml:logicalSource map:source_000 ;
 	rdf:type rr:TriplesMap ;
 	rdfs:label "Thoroughfare" ;
-	rr:predicateObjectMap map:pom_000, map:pom_001, map:pom_002, map:pom_003, map:pom_004 ;
+	rr:predicateObjectMap map:pom_000, map:pom_001, map:pom_002, map:pom_003, map:pom_004, map:pom_005 ;
 	rr:subjectMap map:s_000 .
 
 map:om_000 rdf:type rr:ObjectMap ;
@@ -50,14 +51,22 @@ map:om_004 rdf:type rr:ObjectMap ;
 	rr:template "http://paris.linkeddata.es/info/resource/district/{Número_de_Distrito}" ;
 	rr:termType rr:IRI .
 
-map:om_005 rdf:type rr:ObjectMap ;
+map:om_005 rml:reference "same_as_wikidata_Calle" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:IRI .
+
+map:om_006 rdf:type rr:ObjectMap ;
 	rr:constant ns_ont:District ;
 	rr:termType rr:IRI .
 
-map:om_006 rml:reference "Número_de_Distrito" ;
+map:om_007 rml:reference "Número_de_Distrito" ;
 	rdf:type rr:ObjectMap ;
 	rr:datatype xsd:integer ;
 	rr:termType rr:Literal .
+
+map:om_008 rml:reference "same_as_wikidata_Número_de_Distrito" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:IRI .
 
 map:pm_000 rdf:type rr:PredicateMap ;
 	rr:constant rdf:type .
@@ -75,10 +84,16 @@ map:pm_004 rdf:type rr:PredicateMap ;
 	rr:constant ns_ont:partOf .
 
 map:pm_005 rdf:type rr:PredicateMap ;
-	rr:constant rdf:type .
+	rr:constant owl:sameAs .
 
 map:pm_006 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+map:pm_007 rdf:type rr:PredicateMap ;
 	rr:constant ns_ont:idDistrict .
+
+map:pm_008 rdf:type rr:PredicateMap ;
+	rr:constant owl:sameAs .
 
 map:pom_000 rdf:type rr:PredicateObjectMap ;
 	rr:objectMap map:om_000 ;
@@ -108,6 +123,14 @@ map:pom_006 rdf:type rr:PredicateObjectMap ;
 	rr:objectMap map:om_006 ;
 	rr:predicateMap map:pm_006 .
 
+map:pom_007 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_007 ;
+	rr:predicateMap map:pm_007 .
+
+map:pom_008 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_008 ;
+	rr:predicateMap map:pm_008 .
+
 map:rules_000 <http://rdfs.org/ns/void#exampleResource> map:map_District_000, map:map_Thoroughfare_000 ;
 	rdf:type <http://rdfs.org/ns/void#Dataset> .
 
@@ -118,10 +141,10 @@ map:s_001 rdf:type rr:SubjectMap ;
 	rr:template "http://paris.linkeddata.es/info/resource/District/{Número_de_Distrito}" .
 
 map:source_000 rml:referenceFormulation ql:CSV ;
-	rml:source "/content/drive/MyDrive/hands_on_mapping/adresse-paris-updated.csv" ;
+	rml:source "/content/drive/MyDrive/hands_on_mapping/adresse-paris-updated-with-links.csv" ;
 	rdf:type rml:LogicalSource .
 
 map:source_001 rml:referenceFormulation ql:CSV ;
-	rml:source "/content/drive/MyDrive/hands_on_mapping/adresse-paris-updated.csv" ;
+	rml:source "/content/drive/MyDrive/hands_on_mapping/adresse-paris-updated-with-links.csv" ;
 	rdf:type rml:LogicalSource .
 

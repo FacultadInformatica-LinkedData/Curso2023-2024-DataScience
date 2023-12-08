@@ -5,6 +5,7 @@
 @prefix ql: <http://semweb.mmlab.be/ns/ql#> .
 @prefix map: <http://mapping.example.com/> .
 @prefix ma: <http://www.w3.org/ns/ma-ont#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
@@ -19,25 +20,25 @@
 map:map_Contact_000 rml:logicalSource map:source_003 ;
 	rdf:type rr:TriplesMap ;
 	rdfs:label "Contact" ;
-	rr:predicateObjectMap map:pom_022, map:pom_023, map:pom_024 ;
+	rr:predicateObjectMap map:pom_024, map:pom_025, map:pom_026 ;
 	rr:subjectMap map:s_003 .
 
 map:map_District_000 rml:logicalSource map:source_001 ;
 	rdf:type rr:TriplesMap ;
 	rdfs:label "District" ;
-	rr:predicateObjectMap map:pom_017, map:pom_018 ;
+	rr:predicateObjectMap map:pom_017, map:pom_018, map:pom_019 ;
 	rr:subjectMap map:s_001 .
 
 map:map_GeoPoint_000 rml:logicalSource map:source_004 ;
 	rdf:type rr:TriplesMap ;
 	rdfs:label "GeoPoint" ;
-	rr:predicateObjectMap map:pom_025, map:pom_026, map:pom_027 ;
+	rr:predicateObjectMap map:pom_027, map:pom_028, map:pom_029 ;
 	rr:subjectMap map:s_004 .
 
 map:map_NonSubsRate_000 rml:logicalSource map:source_006 ;
 	rdf:type rr:TriplesMap ;
 	rdfs:label "NonSubsRate" ;
-	rr:predicateObjectMap map:pom_038, map:pom_039, map:pom_040, map:pom_041, map:pom_042, map:pom_043, map:pom_044, map:pom_045, map:pom_046 ;
+	rr:predicateObjectMap map:pom_040, map:pom_041, map:pom_042, map:pom_043, map:pom_044, map:pom_045, map:pom_046, map:pom_047, map:pom_048 ;
 	rr:subjectMap map:s_006 .
 
 map:map_Parking_000 rml:logicalSource map:source_000 ;
@@ -49,13 +50,13 @@ map:map_Parking_000 rml:logicalSource map:source_000 ;
 map:map_SubsRate_000 rml:logicalSource map:source_005 ;
 	rdf:type rr:TriplesMap ;
 	rdfs:label "SubsRate" ;
-	rr:predicateObjectMap map:pom_028, map:pom_029, map:pom_030, map:pom_031, map:pom_032, map:pom_033, map:pom_034, map:pom_035, map:pom_036, map:pom_037 ;
+	rr:predicateObjectMap map:pom_030, map:pom_031, map:pom_032, map:pom_033, map:pom_034, map:pom_035, map:pom_036, map:pom_037, map:pom_038, map:pom_039 ;
 	rr:subjectMap map:s_005 .
 
 map:map_Thoroughfare_000 rml:logicalSource map:source_002 ;
 	rdf:type rr:TriplesMap ;
 	rdfs:label "Thoroughfare" ;
-	rr:predicateObjectMap map:pom_019, map:pom_020, map:pom_021 ;
+	rr:predicateObjectMap map:pom_020, map:pom_021, map:pom_022, map:pom_023 ;
 	rr:subjectMap map:s_002 .
 
 map:om_000 rdf:type rr:ObjectMap ;
@@ -133,7 +134,7 @@ map:om_015 rdf:type rr:ObjectMap ;
 	rr:termType rr:IRI .
 
 map:om_016 rdf:type rr:ObjectMap ;
-	rr:template "http://paris.linkeddata.es/info/resource/NonSubsrate/{id}" ;
+	rr:template "http://paris.linkeddata.es/info/resource/Nonsubsrate/{id}" ;
 	rr:termType rr:IRI .
 
 map:om_017 rdf:type rr:ObjectMap ;
@@ -145,137 +146,145 @@ map:om_018 rml:reference "District" ;
 	rr:datatype xsd:integer ;
 	rr:termType rr:Literal .
 
-map:om_019 rdf:type rr:ObjectMap ;
+map:om_019 rml:reference "same_as_wikidata_District" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:IRI .
+
+map:om_020 rdf:type rr:ObjectMap ;
 	rr:constant ns_ont:Thoroughfare ;
 	rr:termType rr:IRI .
 
-map:om_020 rml:reference "Type_of_road" ;
+map:om_021 rml:reference "Type_of_road" ;
 	rdf:type rr:ObjectMap ;
 	rr:datatype xsd:string ;
 	rr:termType rr:Literal .
 
-map:om_021 rml:reference "Name_of_the_Street" ;
+map:om_022 rml:reference "Name_of_the_Street" ;
 	rdf:type rr:ObjectMap ;
 	rr:datatype xsd:string ;
 	rr:termType rr:Literal .
 
-map:om_022 rdf:type rr:ObjectMap ;
+map:om_023 rml:reference "same_as_wikidata_Name_of_the_street" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:IRI .
+
+map:om_024 rdf:type rr:ObjectMap ;
 	rr:constant ns_ont:Contact ;
 	rr:termType rr:IRI .
 
-map:om_023 rml:reference "Phone" ;
+map:om_025 rml:reference "Phone" ;
 	rdf:type rr:ObjectMap ;
 	rr:datatype xsd:integer ;
 	rr:termType rr:Literal .
 
-map:om_024 rml:reference "URL" ;
+map:om_026 rml:reference "URL" ;
 	rdf:type rr:ObjectMap ;
 	rr:datatype xsd:string ;
 	rr:termType rr:Literal .
 
-map:om_025 rdf:type rr:ObjectMap ;
+map:om_027 rdf:type rr:ObjectMap ;
 	rr:constant geo:Point ;
 	rr:termType rr:IRI .
 
-map:om_026 rml:reference "CoordenadaX" ;
+map:om_028 rml:reference "CoordenadaX" ;
 	rdf:type rr:ObjectMap ;
 	rr:datatype xsd:string ;
 	rr:termType rr:Literal .
 
-map:om_027 rml:reference "CoordenadaY" ;
+map:om_029 rml:reference "CoordenadaY" ;
 	rdf:type rr:ObjectMap ;
 	rr:datatype xsd:string ;
 	rr:termType rr:Literal .
 
-map:om_028 rdf:type rr:ObjectMap ;
+map:om_030 rdf:type rr:ObjectMap ;
 	rr:constant ns_ont:SubsRate ;
 	rr:termType rr:IRI .
 
-map:om_029 rml:reference "MonthlySubCar" ;
+map:om_031 rml:reference "MonthlySubCar" ;
 	rdf:type rr:ObjectMap ;
 	rr:datatype xsd:float ;
 	rr:termType rr:Literal .
 
-map:om_030 rml:reference "AnnualSubCar" ;
+map:om_032 rml:reference "AnnualSubCar" ;
 	rdf:type rr:ObjectMap ;
 	rr:datatype xsd:float ;
 	rr:termType rr:Literal .
 
-map:om_031 rml:reference "MonthlySubPRM" ;
+map:om_033 rml:reference "MonthlySubPRM" ;
 	rdf:type rr:ObjectMap ;
 	rr:datatype xsd:float ;
 	rr:termType rr:Literal .
 
-map:om_032 rml:reference "AnnualSubPRM" ;
+map:om_034 rml:reference "AnnualSubPRM" ;
 	rdf:type rr:ObjectMap ;
 	rr:datatype xsd:float ;
 	rr:termType rr:Literal .
 
-map:om_033 rml:reference "MothlySubElectric" ;
+map:om_035 rml:reference "MothlySubElectric" ;
 	rdf:type rr:ObjectMap ;
 	rr:datatype xsd:float ;
 	rr:termType rr:Literal .
 
-map:om_034 rml:reference "AnnualSubElectric" ;
+map:om_036 rml:reference "AnnualSubElectric" ;
 	rdf:type rr:ObjectMap ;
 	rr:datatype xsd:float ;
 	rr:termType rr:Literal .
 
-map:om_035 rml:reference "MonthlySubMoto" ;
+map:om_037 rml:reference "MonthlySubMoto" ;
 	rdf:type rr:ObjectMap ;
 	rr:datatype xsd:float ;
 	rr:termType rr:Literal .
 
-map:om_036 rml:reference "AnnualSubMoto" ;
+map:om_038 rml:reference "AnnualSubMoto" ;
 	rdf:type rr:ObjectMap ;
 	rr:datatype xsd:float ;
 	rr:termType rr:Literal .
 
-map:om_037 rml:reference "MonthlySubBicl" ;
+map:om_039 rml:reference "MonthlySubBicl" ;
 	rdf:type rr:ObjectMap ;
 	rr:datatype xsd:float ;
 	rr:termType rr:Literal .
 
-map:om_038 rdf:type rr:ObjectMap ;
+map:om_040 rdf:type rr:ObjectMap ;
 	rr:constant ns_ont:NonSubsRate ;
 	rr:termType rr:IRI .
 
-map:om_039 rml:reference "Tarif_1h" ;
+map:om_041 rml:reference "Tarif_1h" ;
 	rdf:type rr:ObjectMap ;
 	rr:datatype xsd:float ;
 	rr:termType rr:Literal .
 
-map:om_040 rml:reference "Tarif_2h" ;
+map:om_042 rml:reference "Tarif_2h" ;
 	rdf:type rr:ObjectMap ;
 	rr:datatype xsd:float ;
 	rr:termType rr:Literal .
 
-map:om_041 rml:reference "Tarif_3h" ;
+map:om_043 rml:reference "Tarif_3h" ;
 	rdf:type rr:ObjectMap ;
 	rr:datatype xsd:float ;
 	rr:termType rr:Literal .
 
-map:om_042 rml:reference "Tarif_4h" ;
+map:om_044 rml:reference "Tarif_4h" ;
 	rdf:type rr:ObjectMap ;
 	rr:datatype xsd:float ;
 	rr:termType rr:Literal .
 
-map:om_043 rml:reference "Tarif_24h" ;
+map:om_045 rml:reference "Tarif_24h" ;
 	rdf:type rr:ObjectMap ;
 	rr:datatype xsd:float ;
 	rr:termType rr:Literal .
 
-map:om_044 rml:reference "Tarif_15mn Moto" ;
+map:om_046 rml:reference "Tarif_15mn Moto" ;
 	rdf:type rr:ObjectMap ;
 	rr:datatype xsd:float ;
 	rr:termType rr:Literal .
 
-map:om_045 rml:reference "Tarif_30mn Moto" ;
+map:om_047 rml:reference "Tarif_30mn Moto" ;
 	rdf:type rr:ObjectMap ;
 	rr:datatype xsd:float ;
 	rr:termType rr:Literal .
 
-map:om_046 rml:reference "Tarif_24h Moto" ;
+map:om_048 rml:reference "Tarif_24h Moto" ;
 	rdf:type rr:ObjectMap ;
 	rr:datatype xsd:float ;
 	rr:termType rr:Literal .
@@ -338,87 +347,93 @@ map:pm_018 rdf:type rr:PredicateMap ;
 	rr:constant ns_ont:idDistrict .
 
 map:pm_019 rdf:type rr:PredicateMap ;
-	rr:constant rdf:type .
+	rr:constant owl:sameAs .
 
 map:pm_020 rdf:type rr:PredicateMap ;
-	rr:constant ns_ont:thoroughfareType .
+	rr:constant rdf:type .
 
 map:pm_021 rdf:type rr:PredicateMap ;
-	rr:constant ns_ont:hasThoroughfareName .
+	rr:constant ns_ont:thoroughfareType .
 
 map:pm_022 rdf:type rr:PredicateMap ;
-	rr:constant rdf:type .
+	rr:constant ns_ont:hasThoroughfareName .
 
 map:pm_023 rdf:type rr:PredicateMap ;
-	rr:constant ns_ont:hasPhoneNumber .
+	rr:constant owl:sameAs .
 
 map:pm_024 rdf:type rr:PredicateMap ;
-	rr:constant ns_ont:hasWebUrl .
+	rr:constant rdf:type .
 
 map:pm_025 rdf:type rr:PredicateMap ;
-	rr:constant rdf:type .
+	rr:constant ns_ont:hasPhoneNumber .
 
 map:pm_026 rdf:type rr:PredicateMap ;
-	rr:constant geo:lat .
+	rr:constant ns_ont:hasWebUrl .
 
 map:pm_027 rdf:type rr:PredicateMap ;
-	rr:constant geo:long .
+	rr:constant rdf:type .
 
 map:pm_028 rdf:type rr:PredicateMap ;
-	rr:constant rdf:type .
+	rr:constant geo:lat .
 
 map:pm_029 rdf:type rr:PredicateMap ;
-	rr:constant ns_ont:hasMonthlySubsCarRate .
+	rr:constant geo:long .
 
 map:pm_030 rdf:type rr:PredicateMap ;
-	rr:constant ns_ont:hasAnnualSubsCarRate .
-
-map:pm_031 rdf:type rr:PredicateMap ;
-	rr:constant ns_ont:hasMonthlySubsPRMRate .
-
-map:pm_032 rdf:type rr:PredicateMap ;
-	rr:constant ns_ont:hasAnnualSubsPRMRate .
-
-map:pm_033 rdf:type rr:PredicateMap ;
-	rr:constant ns_ont:hasMonthlySubsElectricRate .
-
-map:pm_034 rdf:type rr:PredicateMap ;
-	rr:constant ns_ont:hasAnnualSubsElectricRate .
-
-map:pm_035 rdf:type rr:PredicateMap ;
-	rr:constant ns_ont:hasMonthlySubsMotoRate .
-
-map:pm_036 rdf:type rr:PredicateMap ;
-	rr:constant ns_ont:hasAnnualSubsMotoRate .
-
-map:pm_037 rdf:type rr:PredicateMap ;
-	rr:constant ns_ont:hasMonthlySubsBiciRate .
-
-map:pm_038 rdf:type rr:PredicateMap ;
 	rr:constant rdf:type .
 
+map:pm_031 rdf:type rr:PredicateMap ;
+	rr:constant ns_ont:hasMonthlySubsCarRate .
+
+map:pm_032 rdf:type rr:PredicateMap ;
+	rr:constant ns_ont:hasAnnualSubsCarRate .
+
+map:pm_033 rdf:type rr:PredicateMap ;
+	rr:constant ns_ont:hasMonthlySubsPRMRate .
+
+map:pm_034 rdf:type rr:PredicateMap ;
+	rr:constant ns_ont:hasAnnualSubsPRMRate .
+
+map:pm_035 rdf:type rr:PredicateMap ;
+	rr:constant ns_ont:hasMonthlySubsElectricRate .
+
+map:pm_036 rdf:type rr:PredicateMap ;
+	rr:constant ns_ont:hasAnnualSubsElectricRate .
+
+map:pm_037 rdf:type rr:PredicateMap ;
+	rr:constant ns_ont:hasMonthlySubsMotoRate .
+
+map:pm_038 rdf:type rr:PredicateMap ;
+	rr:constant ns_ont:hasAnnualSubsMotoRate .
+
 map:pm_039 rdf:type rr:PredicateMap ;
-	rr:constant ns_ont:has1hCarRate .
+	rr:constant ns_ont:hasMonthlySubsBiciRate .
 
 map:pm_040 rdf:type rr:PredicateMap ;
-	rr:constant ns_ont:has2hCarRate .
+	rr:constant rdf:type .
 
 map:pm_041 rdf:type rr:PredicateMap ;
-	rr:constant ns_ont:has3hCarRate .
+	rr:constant ns_ont:has1hCarRate .
 
 map:pm_042 rdf:type rr:PredicateMap ;
-	rr:constant ns_ont:has4hCarRate .
+	rr:constant ns_ont:has2hCarRate .
 
 map:pm_043 rdf:type rr:PredicateMap ;
-	rr:constant ns_ont:has24hCarRate .
+	rr:constant ns_ont:has3hCarRate .
 
 map:pm_044 rdf:type rr:PredicateMap ;
-	rr:constant ns_ont:has15mnMotoRate .
+	rr:constant ns_ont:has4hCarRate .
 
 map:pm_045 rdf:type rr:PredicateMap ;
-	rr:constant ns_ont:has30mnMotoRate .
+	rr:constant ns_ont:has24hCarRate .
 
 map:pm_046 rdf:type rr:PredicateMap ;
+	rr:constant ns_ont:has15mnMotoRate .
+
+map:pm_047 rdf:type rr:PredicateMap ;
+	rr:constant ns_ont:has30mnMotoRate .
+
+map:pm_048 rdf:type rr:PredicateMap ;
 	rr:constant ns_ont:has24hMotoRate .
 
 map:pom_000 rdf:type rr:PredicateObjectMap ;
@@ -609,6 +624,14 @@ map:pom_046 rdf:type rr:PredicateObjectMap ;
 	rr:objectMap map:om_046 ;
 	rr:predicateMap map:pm_046 .
 
+map:pom_047 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_047 ;
+	rr:predicateMap map:pm_047 .
+
+map:pom_048 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_048 ;
+	rr:predicateMap map:pm_048 .
+
 map:rules_000 <http://rdfs.org/ns/void#exampleResource> map:map_Contact_000, map:map_District_000, map:map_GeoPoint_000, map:map_NonSubsRate_000, map:map_Parking_000, map:map_SubsRate_000, map:map_Thoroughfare_000 ;
 	rdf:type <http://rdfs.org/ns/void#Dataset> .
 
@@ -638,26 +661,27 @@ map:source_000 rml:referenceFormulation ql:CSV ;
 	rdf:type rml:LogicalSource .
 
 map:source_001 rml:referenceFormulation ql:CSV ;
-	rml:source "/content/drive/MyDrive/hands_on_mapping/parking-paris-updated.csv" ;
+	rml:source "/content/drive/MyDrive/hands_on_mapping/parking-paris-updated-with-links.csv" ;
 	rdf:type rml:LogicalSource .
 
 map:source_002 rml:referenceFormulation ql:CSV ;
-	rml:source "/content/drive/MyDrive/hands_on_mapping/parking-paris-updated.csv" ;
+	rml:source "/content/drive/MyDrive/hands_on_mapping/parking-paris-updated-with-links.csv" ;
 	rdf:type rml:LogicalSource .
 
 map:source_003 rml:referenceFormulation ql:CSV ;
-	rml:source "/content/drive/MyDrive/hands_on_mapping/parking-paris-updated.csv" ;
+	rml:source "/content/drive/MyDrive/hands_on_mapping/parking-paris-updated-with-links.csv" ;
 	rdf:type rml:LogicalSource .
 
 map:source_004 rml:referenceFormulation ql:CSV ;
-	rml:source "/content/drive/MyDrive/hands_on_mapping/parking-paris-updated.csv" ;
+	rml:source "/content/drive/MyDrive/hands_on_mapping/parking-paris-updated-with-links.csv" ;
 	rdf:type rml:LogicalSource .
 
 map:source_005 rml:referenceFormulation ql:CSV ;
-	rml:source "/content/drive/MyDrive/hands_on_mapping/parking-paris-updated.csv" ;
+	rml:source "/content/drive/MyDrive/hands_on_mapping/parking-paris-updated-with-links.csv" ;
 	rdf:type rml:LogicalSource .
 
 map:source_006 rml:referenceFormulation ql:CSV ;
-	rml:source "/content/drive/MyDrive/hands_on_mapping/parking-paris-updated.csv" ;
+	rml:source "/content/drive/MyDrive/hands_on_mapping/parking-paris-updated-with-links.csv" ;
 	rdf:type rml:LogicalSource .
+
 

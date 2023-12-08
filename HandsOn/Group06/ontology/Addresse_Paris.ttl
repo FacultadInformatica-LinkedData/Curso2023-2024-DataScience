@@ -1,6 +1,6 @@
  @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix mod: <https://w3id.org/mod#> .
-@prefix ns: <http://paris.linkeddata.es/streets/ontology/ont1#> .
+@prefix ns: <http://paris.linkeddata.es/info/ontology/streets#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -16,27 +16,28 @@ ns: a owl:Ontology ;
 
 ns:hasId a owl:DatatypeProperty ;
     rdfs:label "has id" ;
-    rdfs:domain ns:thoroughfare ;
-    rdfs:range xsd:Integer .
+    rdfs:domain ns:Thoroughfare ;
+    rdfs:range xsd:integer .
 
 ns:hasName a owl:DatatypeProperty ;
     rdfs:label "has name" ;
-    rdfs:domain ns:thoroughfare ;
-    rdfs:range xsd:String .
+    rdfs:domain ns:Thoroughfare ;
+    rdfs:range xsd:string .
 
 ns:idDistrict a owl:DatatypeProperty ;
     rdfs:label "id district" ;
     rdfs:domain ns:District ;
-    rdfs:range xsd:Integer .
+    rdfs:range xsd:integer .
 
 ns:partOf a owl:ObjectProperty ;
     rdfs:label "part of" ;
+    rdfs:domain ns:Thoroughfare ;
     rdfs:range ns:District .
 
 ns:thoroughfareType a owl:DatatypeProperty ;
     rdfs:label "thoroughfare type" ;
-    rdfs:domain ns:thoroughfare ;
-    rdfs:range xsd:String .
+    rdfs:domain ns:Thoroughfare ;
+    rdfs:range xsd:string .
 
 dc:contributor a owl:AnnotationProperty .
 
@@ -47,6 +48,6 @@ dc:title a owl:AnnotationProperty .
 ns:District a owl:Class ;
     rdfs:label "District" .
 
-ns:thoroughfare a owl:Class ;
-    rdfs:label "thoroughfare" .
+ns:Thoroughfare a owl:Class ;
+    rdfs:label "Thoroughfare" .
 

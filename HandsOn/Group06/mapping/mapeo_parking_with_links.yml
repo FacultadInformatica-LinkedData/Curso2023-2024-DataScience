@@ -12,6 +12,7 @@ prefixes:
   ns_ind: http://paris.linkeddata.es/info/resource/
   geo: http://www.w3.org/2003/01/geo/wgs84_pos#
   ns_ont: http://paris.linkeddata.es/info/resource/parkings#
+  owl: http://www.w3.org/2002/07/owl#
   
 mapping:
   
@@ -40,24 +41,26 @@ mapping:
       
   District:
     sources:
-      - [/content/drive/MyDrive/hands_on_mapping/parking-paris-updated.csv~csv]
+      - [/content/drive/MyDrive/hands_on_mapping/parking-paris-updated-with-links.csv~csv]
     s: ns_ind:District/$(District)
     po:
       - [a, ns_ont:District]
       - [ns_ont:idDistrict,$(District),xsd:integer]
+      - [owl:sameAs,$(same_as_wikidata_District)~iri]
   
   Thoroughfare:
     sources:
-      - [/content/drive/MyDrive/hands_on_mapping/parking-paris-updated.csv~csv]
+      - [/content/drive/MyDrive/hands_on_mapping/parking-paris-updated-with-links.csv~csv]
     s: ns_ind:Thoroughfare/$(id)
     po:
       - [a, ns_ont:Thoroughfare]
       - [ns_ont:thoroughfareType,$(Type_of_road),xsd:string]
       - [ns_ont:hasThoroughfareName,$(Name_of_the_Street),xsd:string]
+      - [owl:sameAs,$(same_as_wikidata_Name_of_the_street)~iri]
   
   Contact:
     sources:
-      - [/content/drive/MyDrive/hands_on_mapping/parking-paris-updated.csv~csv]
+      - [/content/drive/MyDrive/hands_on_mapping/parking-paris-updated-with-links.csv~csv]
     s: ns_ind:Contact/$(id)
     po:
       - [a, ns_ont:Contact]
@@ -66,7 +69,7 @@ mapping:
   
   GeoPoint:
     sources:  
-      - [/content/drive/MyDrive/hands_on_mapping/parking-paris-updated.csv~csv]
+      - [/content/drive/MyDrive/hands_on_mapping/parking-paris-updated-with-links.csv~csv]
     s: geo:Point/$(id)
     po:
       - [a, geo:Point]
@@ -75,7 +78,7 @@ mapping:
   
   SubsRate:
       sources:  
-      - [/content/drive/MyDrive/hands_on_mapping/parking-paris-updated.csv~csv]
+      - [/content/drive/MyDrive/hands_on_mapping/parking-paris-updated-with-links.csv~csv]
       s: ns_ind:Subsrate/$(id)
       po:
       - [a, ns_ont:SubsRate]
@@ -91,7 +94,7 @@ mapping:
   
   NonSubsRate:
       sources:  
-      - [/content/drive/MyDrive/hands_on_mapping/parking-paris-updated.csv~csv]
+      - [/content/drive/MyDrive/hands_on_mapping/parking-paris-updated-with-links.csv~csv]
       s: ns_ind:NonSubsrate/$(id)
       po:
       - [a, ns_ont:NonSubsRate]
