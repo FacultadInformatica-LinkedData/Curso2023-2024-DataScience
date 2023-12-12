@@ -13,19 +13,34 @@ ns:StatTrak a owl:Class ;
     rdfs:label "Stat Trak" ;
     rdfs:subClassOf m3:SpeedSensor .
 
+ns:fromFireZone a owl:ObjectProperty ;
+    rdfs:label "from fire zone" ;
+    rdfs:domain db:CityDistrict ;
+    rdfs:range ns:FireZone .
+
+ns:fromPWD a owl:ObjectProperty ;
+    rdfs:label "from p w d" ;
+    rdfs:domain db:CityDistrict ;
+    rdfs:range ns:PublicWorksDivision .
+
+ns:fromPoliceZone a owl:ObjectProperty ;
+    rdfs:label "from police zone" ;
+    rdfs:domain db:CityDistrict ;
+    rdfs:range ns:PoliceZone .
+
 ns:hasDailyCarTraffic a owl:DatatypeProperty ;
     rdfs:label "has daily car traffic" ;
     rdfs:domain ns:Traffic ;
-    rdfs:range xsd:Integer .
+    rdfs:range xsd:integer .
 
 ns:hasDeviceId a owl:DatatypeProperty ;
     rdfs:label "has device id" ;
     rdfs:domain m3:SpeedSensor ;
-    rdfs:range xsd:Integer .
+    rdfs:range xsd:string .
 
 ns:hasDuration a owl:ObjectProperty ;
     rdfs:label "has duration" ;
-    rdfs:domain ns:Measurements ;
+    rdfs:domain ns:Measurement ;
     rdfs:range w3:TemporalEntity .
 
 ns:hasLocation a owl:ObjectProperty ;
@@ -36,57 +51,57 @@ ns:hasLocation a owl:ObjectProperty ;
 ns:hasMaxSpeed a owl:DatatypeProperty ;
     rdfs:label "has max speed" ;
     rdfs:domain m3:Speed ;
-    rdfs:range xsd:Integer .
+    rdfs:range xsd:integer .
 
 ns:hasMedianSpeed a owl:DatatypeProperty ;
     rdfs:label "has median speed" ;
     rdfs:domain m3:Speed ;
-    rdfs:range xsd:Integer .
+    rdfs:range xsd:integer .
 
 ns:hasPercentOverLimit a owl:DatatypeProperty ;
     rdfs:label "has percent over limit" ;
-    rdfs:domain ns:Statistics ;
-    rdfs:range xsd:Integer .
+    rdfs:domain ns:Statistic ;
+    rdfs:range xsd:integer .
 
 ns:hasRecordOid a owl:DatatypeProperty ;
     rdfs:label "has record oid" ;
     rdfs:domain m3:SpeedSensor ;
-    rdfs:range xsd:Integer .
+    rdfs:range xsd:string .
 
 ns:hasSpeed85Percent a owl:DatatypeProperty ;
     rdfs:label "has speed85 percent" ;
-    rdfs:domain ns:Statistics ;
-    rdfs:range xsd:Integer .
+    rdfs:domain ns:Statistic ;
+    rdfs:range xsd:integer .
 
 ns:hasSpeed95Percent a owl:DatatypeProperty ;
     rdfs:label "has speed95 percent" ;
-    rdfs:domain ns:Statistics ;
-    rdfs:range xsd:Integer .
+    rdfs:domain ns:Statistic ;
+    rdfs:range xsd:integer .
 
 ns:hasSpeedLimit a owl:DatatypeProperty ;
     rdfs:label "has speed limit" ;
     rdfs:domain m3:Speed ;
-    rdfs:range xsd:Integer .
+    rdfs:range xsd:integer .
 
 ns:hasSpeedMeasures a owl:ObjectProperty ;
     rdfs:label "has speed measures" ;
-    rdfs:domain ns:Measurements ;
+    rdfs:domain ns:Measurement ;
     rdfs:range m3:Speed .
 
 ns:hasStatisticsMeasures a owl:ObjectProperty ;
     rdfs:label "has statistics measures" ;
-    rdfs:domain ns:Measurements ;
-    rdfs:range ns:Statistics .
+    rdfs:domain ns:Measurement ;
+    rdfs:range ns:Statistic .
 
 ns:hasTrafficMeasures a owl:ObjectProperty ;
     rdfs:label "has traffic measures" ;
-    rdfs:domain ns:Measurements ;
+    rdfs:domain ns:Measurement ;
     rdfs:range ns:Traffic .
 
 ns:isDefinedBy a owl:DatatypeProperty ;
     rdfs:label "is defined by" ;
     rdfs:domain m3:SpeedSensor ;
-    rdfs:range xsd:Integer .
+    rdfs:range xsd:string .
 
 ns:locatedIn a owl:ObjectProperty ;
     rdfs:label "located in" ;
@@ -96,20 +111,13 @@ ns:locatedIn a owl:ObjectProperty ;
 ns:takes a owl:ObjectProperty ;
     rdfs:label "takes" ;
     rdfs:domain m3:SpeedSensor ;
-    rdfs:range ns:Measurements .
+    rdfs:range ns:Measurement .
 
 dc:contributor a owl:AnnotationProperty .
 
 dc:creator a owl:AnnotationProperty .
 
 dc:description a owl:AnnotationProperty .
-
-dc:isPartOf a owl:ObjectProperty ;
-    rdfs:label "is part of" ;
-    rdfs:domain db:CityDistrict ;
-    rdfs:range ns:FireZone,
-        ns:PoliceZone,
-        ns:PublicWorksDivision .
 
 dc:license a owl:AnnotationProperty .
 
@@ -120,12 +128,12 @@ owl:versionInfo a owl:AnnotationProperty .
 geo:lat a owl:DatatypeProperty ;
     rdfs:label "lat" ;
     rdfs:domain geo:Point ;
-    rdfs:range xsd:string .
+    rdfs:range xsd:float .
 
 geo:long a owl:DatatypeProperty ;
     rdfs:label "long" ;
     rdfs:domain geo:Point ;
-    rdfs:range xsd:string .
+    rdfs:range xsd:float .
 
 <https://w3id.org/example#> a owl:Ontology ;
     dc:contributor "Alba Lozano",
@@ -158,9 +166,6 @@ ns:PoliceZone a owl:Class ;
 ns:PublicWorksDivision a owl:Class ;
     rdfs:label "Public Works Division" .
 
-db:CityDistrict a owl:Class ;
-    rdfs:label "City District" .
-
 ns:Traffic a owl:Class ;
     rdfs:label "Traffic" .
 
@@ -170,14 +175,17 @@ geo:Point a owl:Class ;
 w3:TemporalEntity a owl:Class ;
     rdfs:label "Temporal Entity" .
 
-ns:Statistics a owl:Class ;
-    rdfs:label "Statistics" .
+db:CityDistrict a owl:Class ;
+    rdfs:label "City District" .
+
+ns:Statistic a owl:Class ;
+    rdfs:label "Statistic" .
 
 m3:Speed a owl:Class ;
     rdfs:label "Speed" .
 
-ns:Measurements a owl:Class ;
-    rdfs:label "Measurements" .
+ns:Measurement a owl:Class ;
+    rdfs:label "Measurement" .
 
 m3:SpeedSensor a owl:Class ;
     rdfs:label "Speed Sensor" .

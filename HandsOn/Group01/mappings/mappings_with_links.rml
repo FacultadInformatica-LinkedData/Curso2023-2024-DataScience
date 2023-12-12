@@ -20,7 +20,7 @@
       rml:referenceFormulation ql:CSV
    ];
    rr:subjectMap [
-       rr:template "http://pittsburgh.linkeddata.es/traffic/resource/{counter_type}_{_id}";
+       rr:template "http://pittsburgh.linkeddata.es/traffic/resource/{counter_type}/{_id}";
        rr:termType rr:IRI; rr:class ns:StatTrack
    ];
    rr:predicateObjectMap [
@@ -28,21 +28,21 @@
        	rr:objectMap [
    			rml:reference "id"; 
 			rr:termType rr:Literal ;
-			rr:datatype xsd:integer
+			rr:datatype xsd:string
    		] ];
    rr:predicateObjectMap [
        	rr:predicate  ns:hasDeviceId;
        	rr:objectMap [
    			rml:reference "device_id";
    			rr:termType rr:Literal ;
-			rr:datatype xsd:integer
+			rr:datatype xsd:string
    		] ];
    rr:predicateObjectMap [
         rr:predicate ns:hasRecordOid; 
         rr:objectMap [
 			rml:reference "record_oid";
 			rr:termType rr:Literal ;
-			rr:datatype xsd:integer
+			rr:datatype xsd:string
       ] ];
    rr:predicateObjectMap [
         rr:predicate ns:hasLocation; 
@@ -63,7 +63,7 @@
    rr:predicateObjectMap [
        	rr:predicate  ns:takes;
        	rr:objectMap [
-   			rr:parentTriplesMap <#TriplesMap_Measurements> ;
+   			rr:parentTriplesMap <#TriplesMap_Measurement> ;
 			rr:joinCondition[
 				rr:child "_id";
 				rr:parent "_id"
@@ -76,20 +76,22 @@
       rml:referenceFormulation ql:CSV
    ];
    rr:subjectMap [
-       rr:template "http://pittsburgh.linkeddata.es/traffic/resource/Point{_id}";
+       rr:template "http://pittsburgh.linkeddata.es/traffic/resource/Point/{_id}";
        rr:termType rr:IRI; rr:class geo:Point
    ];
    rr:predicateObjectMap [
        	rr:predicate  geo:lat;
        	rr:objectMap [
    			rml:reference "latitude"; 
-			rr:termType rr:Literal
+			rr:termType rr:Literal ;
+			rr:datatype xsd:float
    		] ];
    rr:predicateObjectMap [
        	rr:predicate  geo:long;
        	rr:objectMap [
    			rml:reference "longitude";
-   			rr:termType rr:Literal
+   			rr:termType rr:Literal ;
+			rr:datatype xsd:float
    		] ].
 		
 		
@@ -106,10 +108,11 @@
        	rr:predicate  rdfs:label;
        	rr:objectMap [
    			rml:reference "neighborhood"; 
-			rr:termType rr:Literal
+			rr:termType rr:Literal ;
+			rr:datatype xsd:string
    		] ];
    rr:predicateObjectMap [
-       	rr:predicate  dc:isPartOf;
+       	rr:predicate  ns:fromPWD;
        	rr:objectMap [
    			rr:parentTriplesMap <#TriplesMap_PublicWorksDivision> ;
 			rr:joinCondition[
@@ -117,7 +120,7 @@
 				rr:parent "_id"
    		] ] ];
    rr:predicateObjectMap [
-       	rr:predicate  dc:isPartOf;
+       	rr:predicate  ns:fromPoliceZone;
        	rr:objectMap [
    			rr:parentTriplesMap <#TriplesMap_PoliceZone> ;
 			rr:joinCondition[
@@ -125,7 +128,7 @@
 				rr:parent "_id"
    		] ] ];
    rr:predicateObjectMap [
-       	rr:predicate  dc:isPartOf;
+       	rr:predicate  ns:fromFireZone;
        	rr:objectMap [
    			rr:parentTriplesMap <#TriplesMap_FireZone> ;
 			rr:joinCondition[
@@ -146,14 +149,15 @@
       rml:referenceFormulation ql:CSV
    ];
    rr:subjectMap [
-       rr:template "http://pittsburgh.linkeddata.es/traffic/resource/PWD{public_works_division}";
+       rr:template "http://pittsburgh.linkeddata.es/traffic/resource/PWD/{public_works_division}";
        rr:termType rr:IRI; rr:class ns:PublicWorksDivision
    ];
    rr:predicateObjectMap [
        	rr:predicate  rdfs:label;
        	rr:objectMap [
    			rml:reference "public_works_division"; 
-			rr:termType rr:Literal
+			rr:termType rr:Literal ;
+			rr:datatype xsd:string
    		] ].
 		
 <#TriplesMap_PoliceZone>
@@ -162,14 +166,15 @@
       rml:referenceFormulation ql:CSV
    ];
    rr:subjectMap [
-       rr:template "http://pittsburgh.linkeddata.es/traffic/resource/PZ{police_zone}";
+       rr:template "http://pittsburgh.linkeddata.es/traffic/resource/PZ/{police_zone}";
        rr:termType rr:IRI; rr:class ns:PoliceZone
    ];
    rr:predicateObjectMap [
        	rr:predicate  rdfs:label;
        	rr:objectMap [
    			rml:reference "police_zone"; 
-			rr:termType rr:Literal
+			rr:termType rr:Literal ;
+			rr:datatype xsd:string
    		] ].
 		
 <#TriplesMap_FireZone>
@@ -178,26 +183,27 @@
       rml:referenceFormulation ql:CSV
    ];
    rr:subjectMap [
-       rr:template "http://pittsburgh.linkeddata.es/traffic/resource/FZ{fire_zone}";
+       rr:template "http://pittsburgh.linkeddata.es/traffic/resource/FZ/{fire_zone}";
        rr:termType rr:IRI; rr:class ns:FireZone
    ];
    rr:predicateObjectMap [
        	rr:predicate  rdfs:label;
        	rr:objectMap [
    			rml:reference "fire_zone"; 
-			rr:termType rr:Literal
+			rr:termType rr:Literal ;
+			rr:datatype xsd:string
    		] ].
 		
 		
 		
-<#TriplesMap_Measurements>
+<#TriplesMap_Measurement>
 	rml:logicalSource [
       rml:source "Pittsburgh-Traffic-Count-updated-with-links.csv";
       rml:referenceFormulation ql:CSV
    ];
    rr:subjectMap [
-       rr:template "http://pittsburgh.linkeddata.es/traffic/resource/Measurements{_id}";
-       rr:termType rr:IRI; rr:class ns:Measurements
+       rr:template "http://pittsburgh.linkeddata.es/traffic/resource/Measurement/{_id}";
+       rr:termType rr:IRI; rr:class ns:Measurement
    ];
    rr:predicateObjectMap [
        	rr:predicate  ns:hasTrafficMeasures;
@@ -210,7 +216,7 @@
    rr:predicateObjectMap [
        	rr:predicate  ns:hasStatisticsMeasures;
        	rr:objectMap [
-   			rr:parentTriplesMap <#TriplesMap_Statistics> ;
+   			rr:parentTriplesMap <#TriplesMap_Statistic> ;
 			rr:joinCondition[
 				rr:child "_id";
 				rr:parent "_id"
@@ -243,25 +249,25 @@
       rml:referenceFormulation ql:CSV
    ];
    rr:subjectMap [
-       rr:template "http://pittsburgh.linkeddata.es/traffic/resource/Traffic{_id}";
+       rr:template "http://pittsburgh.linkeddata.es/traffic/resource/Traffic/{_id}";
        rr:termType rr:IRI; rr:class ns:Traffic
    ];
    rr:predicateObjectMap [
-       	rr:predicate  rdfs:label;
+       	rr:predicate  ns:hasDailyCarTraffic;
        	rr:objectMap [
    			rml:reference "average_daily_car_traffic"; 
 			rr:termType rr:Literal;
 			rr:datatype xsd:integer			
    		] ].
 		
-<#TriplesMap_Statistics>
+<#TriplesMap_Statistic>
 	rml:logicalSource [
       rml:source "Pittsburgh-Traffic-Count-updated-with-links.csv";
       rml:referenceFormulation ql:CSV
    ];
    rr:subjectMap [
-       rr:template "http://pittsburgh.linkeddata.es/traffic/resource/Statistics{_id}";
-       rr:termType rr:IRI; rr:class ns:Statistics
+       rr:template "http://pittsburgh.linkeddata.es/traffic/resource/Statistic/{_id}";
+       rr:termType rr:IRI; rr:class ns:Statistic
    ];
    rr:predicateObjectMap [
        	rr:predicate  ns:hasPercentOverLimit;
@@ -291,7 +297,7 @@
       rml:referenceFormulation ql:CSV
    ];
    rr:subjectMap [
-       rr:template "http://pittsburgh.linkeddata.es/traffic/resource/Speed{_id}";
+       rr:template "http://pittsburgh.linkeddata.es/traffic/resource/Speed/{_id}";
        rr:termType rr:IRI; rr:class m3:Speed
    ];
    rr:predicateObjectMap [
@@ -323,7 +329,7 @@
       rml:referenceFormulation ql:CSV
    ];
    rr:subjectMap [
-       rr:template "http://pittsburgh.linkeddata.es/traffic/resource/Duration{_id}";
+       rr:template "http://pittsburgh.linkeddata.es/traffic/resource/Duration/{_id}";
        rr:termType rr:IRI; rr:class w3:TemporalEntity
    ];
    rr:predicateObjectMap [
@@ -350,7 +356,7 @@
       rml:referenceFormulation ql:CSV
    ];
    rr:subjectMap [
-       rr:template "http://pittsburgh.linkeddata.es/traffic/resource/BeginningTime{_id}";
+       rr:template "http://pittsburgh.linkeddata.es/traffic/resource/BeginningTime/{_id}";
        rr:termType rr:IRI; rr:class w3:DateTimeDescription
    ];
    rr:predicateObjectMap [
@@ -381,7 +387,7 @@
       rml:referenceFormulation ql:CSV
    ];
    rr:subjectMap [
-       rr:template "http://pittsburgh.linkeddata.es/traffic/resource/EndTime{_id}";
+       rr:template "http://pittsburgh.linkeddata.es/traffic/resource/EndTime/{_id}";
        rr:termType rr:IRI; rr:class w3:DateTimeDescription
    ];
    rr:predicateObjectMap [
