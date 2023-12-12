@@ -1,0 +1,140 @@
+@prefix base: <http://deportesMadrid/ontology#> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+base: a owl:Ontology ;
+    mod:createdWith <https://chowlk.linkeddata.es/> .
+
+base:EMBAJADORES a owl:DatatypeProperty ;
+    rdfs:label "EMBAJADORES" ;
+    rdfs:domain base:ubicacion .
+
+base:28005 a owl:DatatypeProperty ;
+    rdfs:label "28005" ;
+    rdfs:domain base:ubicacion .
+
+base:CENTRO a owl:DatatypeProperty ;
+    rdfs:label "CENTRO" ;
+    rdfs:domain base:ubicacion .
+
+base:5176409 a owl:DatatypeProperty ;
+    rdfs:label "5176409" ;
+    rdfs:domain base:aparcabicis .
+
+base:OPERATIVO a owl:DatatypeProperty ;
+    rdfs:label "OPERATIVO" ;
+    rdfs:domain base:aparcabicis .
+
+base:2016-02-02 a owl:DatatypeProperty ;
+    rdfs:label "2016-02-02" ;
+    rdfs:domain base:aparcabicis .
+
+base:MU-51 a owl:DatatypeProperty ;
+    rdfs:label "MU-51" ;
+    rdfs:domain base:aparcabicis .
+
+base:Instalación Deportiva Municipal Básica Casino de la Reina a owl:DatatypeProperty ;
+    rdfs:label "Instalación Deportiva Municipal Básica Casino de la Reina" ;
+    rdfs:domain base:instalaciones-deportivas .
+
+base:4548779 a owl:DatatypeProperty ;
+    rdfs:label "4548779" ;
+    rdfs:domain base:instalaciones-deportivas .
+
+base:Instalación Deportiva a owl:DatatypeProperty ;
+    rdfs:label "Instalación Deportiva" ;
+    rdfs:domain base:instalaciones-deportivas .
+
+base:1 Pista Polideportiva1 Pista de Baloncesto a owl:DatatypeProperty ;
+    rdfs:label "1 Pista Polideportiva1 Pista de Baloncesto" ;
+    rdfs:domain base:instalaciones-deportivas .
+
+base:Metro: Embajadores , Lavapies.Bus: 27 , 34 , 36 , 41 , 60 , 119 , 148 , C.Renfe: Embajadores a owl:DatatypeProperty ;
+    rdfs:label "Metro: Embajadores , Lavapies.Bus: 27 , 34 , 36 , 41 , 60 , 119 , 148 , C.Renfe: Embajadores" ;
+    rdfs:domain base:instalaciones-deportivas .
+
+base:http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=6739309c9bc91110VgnVCM2000000c205a0aRCRD a owl:DatatypeProperty ;
+    rdfs:label "http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=6739309c9bc91110VgnVCM2000000c205a0aRCRD" ;
+    rdfs:domain base:instalaciones-deportivas .
+
+base:CASINO a owl:DatatypeProperty ;
+    rdfs:label "CASINO" .
+
+base:CALLE a owl:DatatypeProperty ;
+    rdfs:label "CALLE" .
+
+base:se_encuentra_en a owl:ObjectProperty ;
+    rdfs:label "se_encuentra_en" ;
+    rdfs:domain base:aparcabicis,
+        base:instalaciones-deportivas ;
+    rdfs:range base:ubicacion .
+
+base:tiene_barrio a owl:DatatypeProperty ;
+    rdfs:label "tiene_barrio" ;
+    rdfs:domain base:ubicacion .
+
+base:tiene_codigo-postal a owl:DatatypeProperty ;
+    rdfs:label "tiene_codigo-postal" ;
+    rdfs:domain base:ubicacion .
+
+base:tiene_distrito a owl:DatatypeProperty ;
+    rdfs:label "tiene_distrito" ;
+    rdfs:domain base:ubicacion .
+
+base:tiene_id a owl:DatatypeProperty ;
+    rdfs:label "tiene_id" ;
+    rdfs:domain base:aparcabicis .
+
+base:tiene_estado a owl:DatatypeProperty ;
+    rdfs:label "tiene_estado" ;
+    rdfs:domain base:aparcabicis .
+
+base:tiene_fecha-instalacion a owl:DatatypeProperty ;
+    rdfs:label "tiene_fecha-instalacion" ;
+    rdfs:domain base:aparcabicis .
+
+base:tiene_modelo a owl:DatatypeProperty ;
+    rdfs:label "tiene_modelo" ;
+    rdfs:domain base:aparcabicis .
+
+base:tiene_nombre a owl:DatatypeProperty ;
+    rdfs:label "tiene_nombre" ;
+    rdfs:domain base:instalaciones-deportivas .
+
+base:tiene_pk a owl:DatatypeProperty ;
+    rdfs:label "tiene_pk" ;
+    rdfs:domain base:instalaciones-deportivas .
+
+base:tiene_tipo a owl:DatatypeProperty ;
+    rdfs:label "tiene_tipo" ;
+    rdfs:domain base:instalaciones-deportivas .
+
+base:tiene_equipamiento a owl:DatatypeProperty ;
+    rdfs:label "tiene_equipamiento" ;
+    rdfs:domain base:instalaciones-deportivas .
+
+base:tiene_transporte a owl:DatatypeProperty ;
+    rdfs:label "tiene_transporte" ;
+    rdfs:domain base:instalaciones-deportivas .
+
+base:tiene_url a owl:DatatypeProperty ;
+    rdfs:label "tiene_url" ;
+    rdfs:domain base:instalaciones-deportivas .
+
+base:tiene_nombre-numero-via a owl:DatatypeProperty ;
+    rdfs:label "tiene_nombre-numero-via" .
+
+base:tiene_clase-vial a owl:DatatypeProperty ;
+    rdfs:label "tiene_clase-vial" .
+
+base:ubicacion a owl:Class ;
+    rdfs:label "ubicacion" .
+
+base:aparcabicis a owl:Class ;
+    rdfs:label "aparcabicis" .
+
+base:instalaciones-deportivas a owl:Class ;
+    rdfs:label "instalaciones-deportivas" .
+

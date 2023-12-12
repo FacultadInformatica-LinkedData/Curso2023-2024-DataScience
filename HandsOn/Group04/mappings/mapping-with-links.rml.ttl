@@ -4,7 +4,7 @@
 @prefix transit: <http://vocab.org/transit/terms/>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix wgs84_pos: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
-@prefix base: <http://deportesMadrid/ontology#> .
+@prefix base: <http://deportesMadrid/ontology#>.
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
 
 <#MapUbicacion> a rr:TriplesMap;
@@ -18,9 +18,10 @@
   ];
 
   rr:predicateObjectMap [
-    rr:predicate base:Barrio;
+    rr:predicate base:tiene_barrio;
     rr:objectMap [
-      rml:reference "BARRIO"
+      rml:reference "BARRIO";
+      rr:datatype xsd:string
       ]
   ];
 
@@ -33,28 +34,22 @@
   ];
 
   rr:predicateObjectMap [
-    rr:predicate base:Codigo-Postal;
+    rr:predicate base:tiene_codigo-postal;
     rr:objectMap [
-      rml:reference "CODIGO-POSTAL"
+      rml:reference "CODIGO-POSTAL";
+      rr:datatype xsd:integer
       ]
   ];
 
     rr:predicateObjectMap [
-    rr:predicate base:Distrito;
+    rr:predicate base:tiene_distrito;
     rr:objectMap [
-      rml:reference "DISTRITO"
-      ]
-  ];
-
-    rr:predicateObjectMap [
-    rr:predicateMap[ rr:constant owl:same_as; rr:termType rr:IRI ];
-    rr:objectMap [
-      rml:reference "same_as_wikidata_distrito";
-      rr:termType rr:IRI
+      rml:reference "DISTRITO";
+      rr:datatype xsd:string
       ]
   ].
 
-<#MapPolideportivo> a rr:TriplesMap;
+<#MapInstalacionesDeportivas> a rr:TriplesMap;
   rml:logicalSource [
     rml:source "./csv/instalaciones-deportivas-with-links.csv" ;
     rml:referenceFormulation ql:CSV
@@ -65,59 +60,66 @@
   ];
 
   rr:predicateObjectMap [
-    rr:predicate base:Nombre;
+    rr:predicate base:tiene_nombre;
     rr:objectMap [
-      rml:reference "NOMBRE"
+      rml:reference "NOMBRE";
+      rr:datatype xsd:string
       ]
   ];
 
     rr:predicateObjectMap [
-    rr:predicate base:PK;
+    rr:predicate base:tiene_pk;
     rr:objectMap [
       rml:reference "PK";
-      rr:datatype <http://www.w3.org/2001/XMLSchema#integer>
+      rr:datatype xsd:integer
     ]
   ];
 
     rr:predicateObjectMap [
-    rr:predicate base:Tipo;
+    rr:predicate base:tiene_tipo;
     rr:objectMap [
-      rml:reference "TIPO"
+      rml:reference "TIPO";
+      rr:datatype xsd:string
       ]
   ];
 
     rr:predicateObjectMap [
-    rr:predicate base:Equipamiento;
+    rr:predicate base:tiene_equipamiento;
     rr:objectMap [
-      rml:reference "EQUIPAMIENTO"
+      rml:reference "EQUIPAMIENTO";
+      rr:datatype xsd:string
       ]
   ];
 
     rr:predicateObjectMap [
-    rr:predicate base:Transporte;
+    rr:predicate base:tiene_transporte;
     rr:objectMap [
-      rml:reference "TRANSPORTE"
+      rml:reference "TRANSPORTE";
+      rr:datatype xsd:string
       ]
   ];
 
   rr:predicateObjectMap [
-    rr:predicate base:URL;
+    rr:predicate base:tiene_url;
     rr:objectMap [
       rml:reference "CONTENT-URL";
+      rr:datatype xsd:anyURI
       ]
   ];
 
     rr:predicateObjectMap [
-    rr:predicate base:Nombre-via;
+    rr:predicate base:tiene_nombre-numero-via;
     rr:objectMap [
-      rml:reference "NOMBRE-VIA"
+      rml:reference "NOMBRE-VIA";
+      rr:datatype xsd:string
       ]
   ];
 
     rr:predicateObjectMap [
-    rr:predicate base:Clase-vial;
+    rr:predicate base:tiene_clase-vial;
     rr:objectMap [
-      rml:reference "CLASE-VIAL"
+      rml:reference "CLASE-VIAL";
+      rr:datatype xsd:string
       ]
   ];
 
@@ -140,42 +142,45 @@
   ];
 
   rr:predicateObjectMap [
-    rr:predicate base:ID;
+    rr:predicate base:tiene_id;
     rr:objectMap [
       rml:reference "ID";
-      rr:datatype <http://www.w3.org/2001/XMLSchema#integer>
+      rr:datatype xsd:integer
     ]
   ];
     rr:predicateObjectMap [
-    rr:predicate base:Estado;
+    rr:predicate base:tiene_estado;
     rr:objectMap [
       rml:reference "ESTADO";
       rr:datatype xsd:string
       ]
   ];
     rr:predicateObjectMap [
-    rr:predicate base:Fecha-instalacion;
+    rr:predicate base:tiene_fecha-instalacion;
     rr:objectMap [
       rml:reference "FECHA-INSTALACION";
-      rr:datatype xsd:dateTime
+      rr:datatype xsd:string
       ]
   ];
     rr:predicateObjectMap [
-    rr:predicate base:Modelo;
+    rr:predicate base:tiene_modelo;
     rr:objectMap [
-      rml:reference "MODELO"
+      rml:reference "MODELO";
+      rr:datatype xsd:string
       ]
   ];
     rr:predicateObjectMap [
-    rr:predicate base:Nombre-via;
+    rr:predicate base:tiene_nombre-numero-via;
     rr:objectMap [
-      rml:reference "NOMBRE-VIA"
+      rml:reference "NOMBRE-VIA";
+      rr:datatype xsd:string
       ]
   ];
     rr:predicateObjectMap [
-    rr:predicate base:Clase-vial;
+    rr:predicate base:tiene_clase-vial;
     rr:objectMap [
-      rml:reference "CLASE-VIAL"
+      rml:reference "CLASE-VIAL";
+      rr:datatype xsd:string
       ]
   ];
 
