@@ -18,17 +18,17 @@
 
 - [X] Uses the .ttl extension
 - [X] Is serialized in the Turtle format
-- [ ] Follows the resource naming strategy
+- [X] Follows the resource naming strategy
 - [X] Contains at least one class
 - [X] Contains at least one object property (where the value of the property is a resource)
 - [X] Contains at least one datatype property (where the value of the property is a string literal, usually typed)
 - [ ] Defines the domain of all the properties (the origin of the property)
 - [ ] Defines the range of all the properties (the destination of the property)
-- [ ] Defines all class names starting with a capital letter
-- [ ] Defines all property names starting with a non-capital letter
-- [ ] Does not mix labels in different languages (e.g., Spanish and English)
+- [X] Defines all class names starting with a capital letter
+- [X] Defines all property names starting with a non-capital letter
+- [X] Does not mix labels in different languages (e.g., Spanish and English)
 - [ ] Does not define multiple domains or multiple ranges in properties
-- [ ] Contains at least one class that will be used to link to other entities
+- [X] Contains at least one class that will be used to link to other entities
 
 ## Comments on the self-assessment
 _(If required)_

@@ -31,15 +31,53 @@
     rr:class dog-loc:address
   ];
   rr:predicateObjectMap [
-    rr:predicate dog-loc:hasNeighborhood;
+    rr:predicate dog-loc:hasCity;
+    rr:objectMap [
+      rr:parentTriplesMap <#City>
+    ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate dog-loc:hasDistrict;
     rr:objectMap [
       rr:parentTriplesMap <#District>
     ]
   ];
-  rr:predicateObjectMap [
-    rr:predicate dog-loc:hasThoroughfare;
+    rr:predicateObjectMap [
+    rr:predicate dog-loc:onThoroughfare;
     rr:objectMap [
-      rr:parentTriplesMap <#Street>
+      rml:reference "NOMBRE DE VIA";
+      rr:datatype xsd:string
+      ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate dog-loc:isOfStreetType;
+    rr:objectMap [
+      rml:reference "TIPO DE VIA";
+      rr:datatype xsd:string
+      ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate dog-loc:hasStreetNumber;
+    rr:objectMap [
+      rml:reference "NUMERO DIRECCION";
+      rr:datatype xsd:string
+      ]
+  ];
+.
+
+<#City> a rr:TriplesMap;
+  rml:logicalSource [
+    rml:source "centros-animales-with-links.csv" ;
+    rml:referenceFormulation ql:CSV 
+  ];
+  rr:subjectMap [
+    rr:constant <https://w3id.org/DogFriendlyMadrid/info/resource/City/Madrid>;
+    rr:class schema-org:City
+  ];
+  rr:predicateObjectMap [
+    rr:predicate dog-ser:hasService;
+    rr:objectMap [
+      rr:parentTriplesMap <#Vet>
     ]
   ];
 .
@@ -66,39 +104,6 @@
     rr:objectMap [
       rml:reference "URI";
       rr:datatype xsd:anyURI
-      ]
-  ];
-.
-
-<#Street> a rr:TriplesMap;
-  rml:logicalSource [
-    rml:source "centros-animales-with-links.csv" ;
-    rml:referenceFormulation ql:CSV 
-  ];
-  rr:subjectMap [
-    rr:template "https://w3id.org/DogFriendlyMadrid/info/resource/Thoroughfare/{NOMBRE DE VIA}";
-    rr:class dbo:Street
-  ];
-
-  rr:predicateObjectMap [
-    rr:predicate rdfs:label;
-    rr:objectMap [
-      rml:reference "NOMBRE DE VIA";
-      rr:datatype xsd:string
-      ]
-  ];
-  rr:predicateObjectMap [
-    rr:predicate dog-loc:isOfStreetType;
-    rr:objectMap [
-      rml:reference "TIPO DE VIA";
-      rr:datatype xsd:string
-      ]
-  ];
-  rr:predicateObjectMap [
-    rr:predicate dog-loc:hasStreetNumber:;
-    rr:objectMap [
-      rml:reference "NUMERO DIRECCION";
-      rr:datatype xsd:string
       ]
   ];
 .

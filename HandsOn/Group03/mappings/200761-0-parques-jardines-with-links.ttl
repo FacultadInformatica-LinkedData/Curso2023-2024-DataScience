@@ -38,6 +38,27 @@
       rr:datatype xsd:string
       ]
   ];
+    rr:predicateObjectMap [
+    rr:predicate dog-loc:onThoroughfare;
+    rr:objectMap [
+      rml:reference "NOMBRE-VIA";
+      rr:datatype xsd:string
+      ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate dog-loc:isOfStreetType;
+    rr:objectMap [
+      rml:reference "CLASE-VIAL";
+      rr:datatype xsd:string
+      ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate dog-loc:hasStreetNumber:;
+    rr:objectMap [
+      rml:reference "NUM";
+      rr:datatype xsd:string
+      ]
+  ];
 
   rr:predicateObjectMap [
     rr:predicate dog-loc:hasState;
@@ -58,15 +79,9 @@
     ]
   ];
   rr:predicateObjectMap [
-    rr:predicate dog-loc:hasNeighborhood;
+    rr:predicate dog-loc:hasDistrict;
     rr:objectMap [
       rr:parentTriplesMap <#District>
-    ]
-  ];
-  rr:predicateObjectMap [
-    rr:predicate dog-loc:hasThoroughfare;
-    rr:objectMap [
-      rr:parentTriplesMap <#Thoroughfare>
     ]
   ];
 .
@@ -180,39 +195,6 @@
       ]
   ];
   
-.
-
-<#Thoroughfare> a rr:TriplesMap;
-  rml:logicalSource [
-    rml:source "./200761-0-parques-jardines-with-links.csv" ;
-    rml:referenceFormulation ql:CSV 
-  ];
-  rr:subjectMap [
-    rr:template "https://w3id.org/DogFriendlyMadrid/info/resource/Thoroughfare/{NOMBRE-VIA}";
-    rr:class dbo:Street
-  ];
-
-  rr:predicateObjectMap [
-    rr:predicate rdfs:label;
-    rr:objectMap [
-      rml:reference "NOMBRE-VIA";
-      rr:datatype xsd:string
-      ]
-  ];
-  rr:predicateObjectMap [
-    rr:predicate dog-loc:isOfStreetType;
-    rr:objectMap [
-      rml:reference "CLASE-VIAL";
-      rr:datatype xsd:string
-      ]
-  ];
-  rr:predicateObjectMap [
-    rr:predicate dog-loc:hasStreetNumber:;
-    rr:objectMap [
-      rml:reference "NUM";
-      rr:datatype xsd:string
-      ]
-  ];
 .
 
 <#GeoCoordinates> a rr:TriplesMap;
