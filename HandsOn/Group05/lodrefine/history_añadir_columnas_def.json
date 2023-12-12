@@ -1,0 +1,150 @@
+[
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "TOTAL_KG_MUEBLES",
+    "expression": "grel:\"Mueble\"",
+    "onError": "set-to-blank",
+    "newColumnName": "MUEBLES",
+    "columnInsertIndex": 6,
+    "description": "Create column MUEBLES at index 6 based on column TOTAL_KG_MUEBLES using expression grel:\"Mueble\""
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "ENVASES",
+    "newColumnName": "TOTAL_ENVASES",
+    "description": "Rename column ENVASES to TOTAL_ENVASES"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "TOTAL_ENVASES",
+    "expression": "grel:\"Envase\"",
+    "onError": "set-to-blank",
+    "newColumnName": "ENVASES",
+    "columnInsertIndex": 10,
+    "description": "Create column ENVASES at index 10 based on column TOTAL_ENVASES using expression grel:\"Envase\""
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "PAPEL_Y_CARTÓN",
+    "newColumnName": "TOTAL_PAPEL_Y_CARTÓN",
+    "description": "Rename column PAPEL_Y_CARTÓN to TOTAL_PAPEL_Y_CARTÓN"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "TOTAL_PAPEL_Y_CARTÓN",
+    "expression": "grel:\"Papel_y_Carton\"",
+    "onError": "set-to-blank",
+    "newColumnName": "PAPEL_Y_CARTON",
+    "columnInsertIndex": 12,
+    "description": "Create column PAPEL_Y_CARTON at index 12 based on column TOTAL_PAPEL_Y_CARTÓN using expression grel:\"Papel_y_Carton\""
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "REPOSICIÓN_BOLSAS_CANINAS",
+    "expression": "grel:\"Bolsas_caninas\"",
+    "onError": "set-to-blank",
+    "newColumnName": "BOLSAS_CANINAS",
+    "columnInsertIndex": 15,
+    "description": "Create column BOLSAS_CANINAS at index 15 based on column REPOSICIÓN_BOLSAS_CANINAS using expression grel:\"Bolsas_caninas\""
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "TOTAL_SERVICIOS",
+    "expression": "grel:\"Serivicios\"",
+    "onError": "set-to-blank",
+    "newColumnName": "SERVIVCIOS",
+    "columnInsertIndex": 17,
+    "description": "Create column SERVIVCIOS at index 17 based on column TOTAL_SERVICIOS using expression grel:\"Serivicios\""
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "SERVIVCIOS",
+    "newColumnName": "SERVICIOS",
+    "description": "Rename column SERVIVCIOS to SERVICIOS"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "SERVICIOS",
+    "description": "Remove column SERVICIOS"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "TOTAL_SERVICIOS",
+    "expression": "grel:\"Servicios\"",
+    "onError": "set-to-blank",
+    "newColumnName": "SERVICIOS",
+    "columnInsertIndex": 17,
+    "description": "Create column SERVICIOS at index 17 based on column TOTAL_SERVICIOS using expression grel:\"Servicios\""
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "REPOSICIÓN_BOLSAS_CANINAS",
+    "newColumnName": "REPOSICION_BOLSAS_CANINAS",
+    "description": "Rename column REPOSICIÓN_BOLSAS_CANINAS to REPOSICION_BOLSAS_CANINAS"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "TOTAL_PAPEL_Y_CARTÓN",
+    "newColumnName": "TOTAL_PAPEL_Y_CARTON",
+    "description": "Rename column TOTAL_PAPEL_Y_CARTÓN to TOTAL_PAPEL_Y_CARTON"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "﻿﻿ID",
+    "description": "Remove column ﻿﻿ID"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "LOTE",
+    "description": "Remove column LOTE"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "RESTO",
+    "description": "Remove column RESTO"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "ORGÁNICA",
+    "description": "Remove column ORGÁNICA"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "TOTAL_KG_VARIOS",
+    "description": "Remove column TOTAL_KG_VARIOS"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "TOTAL_SERVICIOS",
+    "description": "Remove column TOTAL_SERVICIOS"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "SERVICIOS",
+    "description": "Remove column SERVICIOS"
+  }
+]

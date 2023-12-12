@@ -1,0 +1,218 @@
+[
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "MES",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q47018901",
+        "name": "calendar month"
+      },
+      "autoMatch": true,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column MES to type Q47018901"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "MES",
+    "similarValue": "MAYO",
+    "judgment": "matched",
+    "match": {
+      "id": "Q19458599",
+      "name": "Mayo",
+      "types": [
+        ""
+      ],
+      "score": 50
+    },
+    "shareNewTopics": false,
+    "description": "Match item Mayo (Q19458599) for cells containing \"MAYO\" in column MES"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "MES",
+    "similarValue": "MAYO",
+    "judgment": "matched",
+    "match": {
+      "id": "Q119",
+      "name": "May",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item May (Q119) for cells containing \"MAYO\" in column MES"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "MES",
+    "similarValue": "JULIO",
+    "judgment": "matched",
+    "match": {
+      "id": "Q121",
+      "name": "July",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item July (Q121) for cells containing \"JULIO\" in column MES"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "MES",
+    "similarValue": "September",
+    "judgment": "matched",
+    "match": {
+      "id": "Q123",
+      "name": "September",
+      "types": [
+        "Q47018901",
+        "Q47018901",
+        "Q47018901"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item September (Q123) for cells containing \"September\" in column MES"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "MES",
+    "similarValue": "October",
+    "judgment": "matched",
+    "match": {
+      "id": "Q124",
+      "name": "October",
+      "types": [
+        "Q47018901"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item October (Q124) for cells containing \"October\" in column MES"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "MES",
+    "similarValue": "November",
+    "judgment": "matched",
+    "match": {
+      "id": "Q125",
+      "name": "November",
+      "types": [
+        "Q47018901"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item November (Q125) for cells containing \"November\" in column MES"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "MES",
+    "similarValue": "December",
+    "judgment": "matched",
+    "match": {
+      "id": "Q126",
+      "name": "December",
+      "types": [
+        "Q47018901"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item December (Q126) for cells containing \"December\" in column MES"
+  },
+  {
+    "op": "core/column-addition-by-fetching-urls",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "MES_WIKIDATA",
+    "urlExpression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "WIKIDATA_MES",
+    "columnInsertIndex": 2,
+    "delay": 500,
+    "cacheResponses": true,
+    "httpHeadersJson": [
+      {
+        "name": "authorization",
+        "value": ""
+      },
+      {
+        "name": "user-agent",
+        "value": "OpenRefine 3.7.6 [182a17a]"
+      },
+      {
+        "name": "accept",
+        "value": "*/*"
+      }
+    ],
+    "description": "Create column WIKIDATA_MES at index 2 by fetching URLs based on column MES_WIKIDATA using expression grel:value"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "WIKIDATA_MES",
+    "description": "Remove column WIKIDATA_MES"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "MES",
+    "expression": "grel:\"https://www.wikidata.org/wiki/\" + cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "WIKIDATA_MES",
+    "columnInsertIndex": 1,
+    "description": "Create column WIKIDATA_MES at index 1 based on column MES using expression grel:\"https://www.wikidata.org/wiki/\" + cell.recon.match.id"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "MES_WIKIDATA",
+    "description": "Remove column MES_WIKIDATA"
+  }
+]

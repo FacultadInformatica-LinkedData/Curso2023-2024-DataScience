@@ -1,0 +1,34 @@
+[
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "TOTAL_KG_MUEBLES",
+    "expression": "grel:\"Mueble\"",
+    "onError": "set-to-blank",
+    "newColumnName": "MUEBLES",
+    "columnInsertIndex": 6,
+    "description": "Create column MUEBLES at index 6 based on column TOTAL_KG_MUEBLES using expression grel:\"Mueble\""
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "ENVASES",
+    "newColumnName": "TOTAL_ENVASES",
+    "description": "Rename column ENVASES to TOTAL_ENVASES"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "TOTAL_ENVASES",
+    "expression": "grel:\"Envase\"",
+    "onError": "set-to-blank",
+    "newColumnName": "ENVASES",
+    "columnInsertIndex": 10,
+    "description": "Create column ENVASES at index 10 based on column TOTAL_ENVASES using expression grel:\"Envase\""
+  }
+]

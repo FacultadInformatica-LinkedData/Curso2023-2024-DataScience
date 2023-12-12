@@ -1,0 +1,282 @@
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix map: <http://mapping.example.com/> .
+@prefix ma: <http://www.w3.org/ns/ma-ont#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rev: <http://purl.org/stuff/rev#> .
+@prefix v: <http://rdf.data-vocabulary.org/#> .
+@prefix schema: <http://schema.org/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ont: <http://www.madrid.limpiezaurbana.es/ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+
+<#TriplesMap1> a rr:TriplesMap;
+    rml:logicalSource [
+        rml:source "Actuaciones_limpieza_urbana_2022_cleaned_links.csv" ;
+        rml:referenceFormulation ql:CSV 
+    ];
+    rr:subjectMap [
+        rr:template "http://www.madrid.limpiezaurbana.es/Distrito/{DISTRITO}";
+        rr:class ont:Distrito
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate foaf:name;
+        rr:objectMap [
+        rml:reference "DISTRITO";
+        rr:termType rr:Literal;
+        rr:datatype xsd:string
+        ]
+    ];
+
+    rr:predicateObjectMap [
+    rr:predicateMap[ rr:constant owl:same_as; rr:termType rr:IRI ];
+    rr:objectMap [
+      rml:reference "DISTRITO_WIKIDATA";
+      rr:termType rr:IRI
+      ]
+  ];
+    
+    rr:predicateObjectMap[
+        rr:predicate ont:tieneUnCodigo;
+        rr:objectMap[
+            rml:reference "COD_DISTRITO";
+            rr:dataType xsd:integer;
+            rr:termType rr:Literal
+        ]
+    ];
+
+    rr:predicateObjectMap[
+        rr:predicate ont:seRecoge;
+        rr:objectMap[
+            rr:parentTriplesMap <#Mueble>
+        ]
+    ];
+
+    rr:predicateObjectMap[
+        rr:predicate ont:seRecoge;
+        rr:objectMap[
+            rr:parentTriplesMap <#Envases>
+        ]
+    ];
+
+    rr:predicateObjectMap[
+        rr:predicate ont:seRecoge;
+        rr:objectMap[
+            rr:parentTriplesMap <#Papel>
+        ]
+    ];
+
+    rr:predicateObjectMap[
+        rr:predicate ont:seRecoge;
+        rr:objectMap[
+            rr:parentTriplesMap <#Bolsas>
+        ]
+    ].
+
+<#Mueble> a rr:TriplesMap;
+    rml:logicalSource [
+        rml:source "Actuaciones_limpieza_urbana_2022_cleaned_links.csv" ;
+        rml:referenceFormulation ql:CSV 
+    ];
+
+    rr:subjectMap [
+        rr:template "http://www.madrid.limpiezaurbana.es/Basura/{MUEBLES}";
+        rr:class ont:Basura
+  ];
+
+  rr:predicateObjectMap[
+        rr:predicate ont:tieneUnTotalDe;
+        rr:objectMap[
+            rr:parentTriplesMap <#Total_muebles>
+        ]
+    ].
+
+<#Envases> a rr:TriplesMap;
+    rml:logicalSource [
+        rml:source "Actuaciones_limpieza_urbana_2022_cleaned_links.csv" ;
+        rml:referenceFormulation ql:CSV 
+    ];
+
+    rr:subjectMap [
+        rr:template "http://www.madrid.limpiezaurbana.es/Basura/{ENVASES}";
+        rr:class ont:Basura
+  ];
+
+
+  rr:predicateObjectMap[
+        rr:predicate ont:tieneUnTotalDe;
+        rr:objectMap[
+            rr:parentTriplesMap <#Total_envases>
+        ]
+    ].
+
+<#Papel> a rr:TriplesMap;
+    rml:logicalSource [
+        rml:source "Actuaciones_limpieza_urbana_2022_cleaned_links.csv" ;
+        rml:referenceFormulation ql:CSV 
+    ];
+
+    rr:subjectMap [
+        rr:template "http://www.madrid.limpiezaurbana.es/Basura/{PAPEL_Y_CARTON}";
+        rr:class ont:Basura
+  ];
+
+  rr:predicateObjectMap[
+        rr:predicate ont:tieneUnTotalDe;
+        rr:objectMap[
+            rr:parentTriplesMap <#Total_papel>
+        ]
+    ].
+
+<#Bolsas> a rr:TriplesMap;
+    rml:logicalSource [
+        rml:source "Actuaciones_limpieza_urbana_2022_cleaned_links.csv" ;
+        rml:referenceFormulation ql:CSV 
+    ];
+
+    rr:subjectMap [
+        rr:template "http://www.madrid.limpiezaurbana.es/Basura/{BOLSAS_CANINAS}";
+        rr:class ont:Basura
+  ];
+
+
+  rr:predicateObjectMap[
+        rr:predicate ont:tieneUnTotalDe;
+        rr:objectMap[
+            rr:parentTriplesMap <#Total_bolsas>
+        ]
+    ].
+
+<#Total_muebles> a rr:TriplesMap;
+    rml:logicalSource [
+        rml:source "Actuaciones_limpieza_urbana_2022_cleaned_links.csv" ;
+        rml:referenceFormulation ql:CSV 
+    ];
+
+    rr:subjectMap [
+        rr:template "http://www.madrid.limpiezaurbana.es/Total/{MUEBLES}";
+        rr:class ont:Total
+  ];
+
+  rr:predicateObjectMap[
+        rr:predicate ont:tieneUnTotalDe;
+        rr:objectMap[
+            rml:reference "TOTAL_KG_MUEBLES";
+            rr:dataType xsd:float;
+            rr:termType rr:Literal
+        ]
+    ];
+
+    rr:predicateObjectMap[
+        rr:predicate ont:cuandoSeRecoge;
+        rr:objectMap[
+            rr:parentTriplesMap <#Mes>
+        ]
+    ].
+
+<#Total_envases> a rr:TriplesMap;
+    rml:logicalSource [
+        rml:source "Actuaciones_limpieza_urbana_2022_cleaned_links.csv" ;
+        rml:referenceFormulation ql:CSV 
+    ];
+
+    rr:subjectMap [
+        rr:template "http://www.madrid.limpiezaurbana.es/Total/{ENVASES}";
+        rr:class ont:Total
+  ];
+
+  rr:predicateObjectMap[
+        rr:predicate ont:tieneUnTotalDe;
+        rr:objectMap[
+            rml:reference "TOTAL_ENVASES";
+            rr:dataType xsd:float;
+            rr:termType rr:Literal
+        ]
+    ];
+
+    rr:predicateObjectMap[
+        rr:predicate ont:cuandoSeRecoge;
+        rr:objectMap[
+            rr:parentTriplesMap <#Mes>
+        ]
+    ].
+
+<#Total_papel> a rr:TriplesMap;
+    rml:logicalSource [
+        rml:source "Actuaciones_limpieza_urbana_2022_cleaned_links.csv" ;
+        rml:referenceFormulation ql:CSV 
+    ];
+
+    rr:subjectMap [
+        rr:template "http://www.madrid.limpiezaurbana.es/Total/{PAPEL_Y_CARTON}";
+        rr:class ont:Total
+  ];
+
+  rr:predicateObjectMap[
+        rr:predicate ont:tieneUnTotalDe;
+        rr:objectMap[
+            rml:reference "TOTAL_PAPEL_Y_CARTON";
+            rr:dataType xsd:float;
+            rr:termType rr:Literal
+        ]
+    ];
+
+    rr:predicateObjectMap[
+        rr:predicate ont:cuandoSeRecoge;
+        rr:objectMap[
+            rr:parentTriplesMap <#Mes>
+        ]
+    ].
+
+<#Total_bolsas> a rr:TriplesMap;
+    rml:logicalSource [
+        rml:source "Actuaciones_limpieza_urbana_2022_cleaned_links.csv" ;
+        rml:referenceFormulation ql:CSV 
+    ];
+
+    rr:subjectMap [
+        rr:template "http://www.madrid.limpiezaurbana.es/Total/{BOLSAS_CANINAS}";
+        rr:class ont:Total
+  ];
+
+  rr:predicateObjectMap[
+        rr:predicate ont:tieneUnTotalDe;
+        rr:objectMap[
+            rml:reference "REPOSICION_BOLSAS_CANINAS";
+            rr:dataType xsd:float;
+            rr:termType rr:Literal
+        ]
+    ];
+
+    rr:predicateObjectMap[
+        rr:predicate ont:cuandoSeRecoge;
+        rr:objectMap[
+            rr:parentTriplesMap <#Mes>
+        ]
+    ].
+
+
+<#Mes> a rr:TriplesMap;
+    rml:logicalSource [
+        rml:source "Actuaciones_limpieza_urbana_2022_cleaned_links.csv" ;
+        rml:referenceFormulation ql:CSV 
+    ];
+
+    rr:subjectMap [
+        rr:template "http://www.madrid.limpiezaurbana.es/Mes/{MES}";
+        rr:class ont:Mes
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicateMap[ rr:constant owl:same_as; rr:termType rr:IRI ];
+    rr:objectMap [
+      rml:reference "WIKIDATA_MES";
+      rr:termType rr:IRI
+      ]
+    ].
