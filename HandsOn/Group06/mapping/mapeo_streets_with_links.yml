@@ -11,12 +11,12 @@ prefixes:
   rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
   ns_ind: http://paris.linkeddata.es/info/resource/
   ns_ont: http://paris.linkeddata.es/info/resource/streets#
-  
+  owl: http://www.w3.org/2002/07/owl#  
 mapping:
   
   Thoroughfare:
     sources:
-      - [/content/drive/MyDrive/hands_on_mapping/adresse-paris-updated.csv~csv]
+      - [/content/drive/MyDrive/hands_on_mapping/adresse-paris-updated-with-links.csv~csv]
     s: ns_ind:Thoroughfare/$(Identificador_Dirección)
     po:
       - [a, ns_ont:Thoroughfare]
@@ -24,11 +24,13 @@ mapping:
       - [ns_ont:hasId,$(Identificador_Dirección),xsd:integer]
       - [ns_ont:thoroughfareType,$(Tipo de Vía),xsd:string]
       - [ns_ont:partOf, ns_ind:district/$(Número_de_Distrito)~iri]
+      - [owl:sameAs,$(same_as_wikidata_Calle)~iri]
   
   District:
     sources:
-      - [/content/drive/MyDrive/hands_on_mapping/adresse-paris-updated.csv~csv]
+      - [/content/drive/MyDrive/hands_on_mapping/adresse-paris-updated-with-links.csv~csv]
     s: ns_ind:District/$(Número_de_Distrito)
     po:
       - [a, ns_ont:District]
       - [ns_ont:idDistrict,$(Número_de_Distrito),xsd:integer]
+      - [owl:sameAs,$(same_as_wikidata_Número_de_Distrito)~iri]

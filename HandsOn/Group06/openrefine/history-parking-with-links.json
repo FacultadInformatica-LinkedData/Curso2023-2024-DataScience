@@ -1,0 +1,2832 @@
+[
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q79007",
+        "name": "street"
+      },
+      "autoMatch": true,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column Name_of_the_Street to type Q79007"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Name_of_the_Street",
+    "expression": "grel:\"https://wikidata.org/entity/\"+cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "same_as_wikidata_Name_of_the_street",
+    "columnInsertIndex": 4,
+    "description": "Create column same_as_wikidata_Name_of_the_street at index 4 based on column Name_of_the_Street using expression grel:\"https://wikidata.org/entity/\"+cell.recon.match.id"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "rue lagrange",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3448723",
+      "name": "rue Lagrange",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item rue Lagrange (Q3448723) for cells containing \"rue lagrange\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "rue lagrange",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3448723",
+      "name": "rue Lagrange",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item rue Lagrange (Q3448723) for cells containing \"rue lagrange\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "avenue carnot",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2873553",
+      "name": "avenue Carnot",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item avenue Carnot (Q2873553) for cells containing \"avenue carnot\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "avenue victor hugo",
+    "judgment": "matched",
+    "match": {
+      "id": "Q790581",
+      "name": "avenue Victor-Hugo",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item avenue Victor-Hugo (Q790581) for cells containing \"avenue victor hugo\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "rue des halles",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3451857",
+      "name": "Rue des Halles",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Rue des Halles (Q3451857) for cells containing \"rue des halles\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "avenue pierre de coubertin",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2873811",
+      "name": "avenue Pierre-de-Coubertin",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item avenue Pierre-de-Coubertin (Q2873811) for cells containing \"avenue pierre de coubertin\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "rue ampere",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3446925",
+      "name": "rue Ampère",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item rue Ampère (Q3446925) for cells containing \"rue ampere\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "rue des petits hotels",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3451962",
+      "name": "rue des Petits-Hôtels",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item rue des Petits-Hôtels (Q3451962) for cells containing \"rue des petits hotels\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "rue beethoven",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3447110",
+      "name": "rue Beethoven",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item rue Beethoven (Q3447110) for cells containing \"rue beethoven\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "rue de passy",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1299740",
+      "name": "rue de Passy",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item rue de Passy (Q1299740) for cells containing \"rue de passy\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "rue van gogh",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3450227",
+      "name": "rue Van-Gogh",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item rue Van-Gogh (Q3450227) for cells containing \"rue van gogh\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "avenue marceau",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2873767",
+      "name": "avenue Marceau",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item avenue Marceau (Q2873767) for cells containing \"avenue marceau\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "rue de l arrivee",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3451220",
+      "name": "rue de l'Arrivée",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item rue de l'Arrivée (Q3451220) for cells containing \"rue de l arrivee\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "rue des pyramides",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3451996",
+      "name": "rue des Pyramides",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item rue des Pyramides (Q3451996) for cells containing \"rue des pyramides\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "rue servan",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3450052",
+      "name": "rue Servan",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item rue Servan (Q3450052) for cells containing \"rue servan\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "rue auguste comte",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3447025",
+      "name": "rue Auguste-Comte",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item rue Auguste-Comte (Q3447025) for cells containing \"rue auguste comte\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "rue jouffroy d abbans",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3448601",
+      "name": "rue Jouffroy-d'Abbans",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item rue Jouffroy-d'Abbans (Q3448601) for cells containing \"rue jouffroy d abbans\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "rue jacques henri lartigue",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3448398",
+      "name": "rue Jacques-Henri-Lartigue",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item rue Jacques-Henri-Lartigue (Q3448398) for cells containing \"rue jacques henri lartigue\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "place de la madeleine",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3390375",
+      "name": "place de la Madeleine",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item place de la Madeleine (Q3390375) for cells containing \"place de la madeleine\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "place vendome",
+    "judgment": "matched",
+    "match": {
+      "id": "Q643520",
+      "name": "place Vendôme",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item place Vendôme (Q643520) for cells containing \"place vendome\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "square alban satragne",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3494445",
+      "name": "square Alban-Satragne",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item square Alban-Satragne (Q3494445) for cells containing \"square alban satragne\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "cours marigny",
+    "judgment": "matched",
+    "match": {
+      "id": "Q100436354",
+      "name": "Cours Marigny",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Cours Marigny (Q100436354) for cells containing \"cours marigny\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "boulevard sebastopol",
+    "judgment": "matched",
+    "match": {
+      "id": "Q895080",
+      "name": "boulevard de Sébastopol",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item boulevard de Sébastopol (Q895080) for cells containing \"boulevard sebastopol\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "place du louvre",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3390637",
+      "name": "place du Louvre",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item place du Louvre (Q3390637) for cells containing \"place du louvre\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "rue pernelle",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3449461",
+      "name": "rue Pernelle",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item rue Pernelle (Q3449461) for cells containing \"rue pernelle\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "rue de rivoli",
+    "judgment": "matched",
+    "match": {
+      "id": "Q141747",
+      "name": "rue de Rivoli",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item rue de Rivoli (Q141747) for cells containing \"rue de rivoli\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "avenue hoche",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2873695",
+      "name": "avenue Hoche",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item avenue Hoche (Q2873695) for cells containing \"avenue hoche\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "place de la porte maillot",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3390388",
+      "name": "place de la Porte-Maillot",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item place de la Porte-Maillot (Q3390388) for cells containing \"place de la porte maillot\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "rond point des champs elysees marcel dassault",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3441676",
+      "name": "rond-point des Champs-Élysées-Marcel-Dassault",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item rond-point des Champs-Élysées-Marcel-Dassault (Q3441676) for cells containing \"rond point des champs elysees marcel dassault\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Name_of_the_Street: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Name_of_the_Street",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "avenue daumesnil",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2873598",
+      "name": "avenue Daumesnil",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item avenue Daumesnil (Q2873598) for cells containing \"avenue daumesnil\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Name_of_the_Street: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Name_of_the_Street",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "rue de constantine",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3450684",
+      "name": "rue de Constantine",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item rue de Constantine (Q3450684) for cells containing \"rue de constantine\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Name_of_the_Street: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Name_of_the_Street",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "avenue d eylau",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2873891",
+      "name": "avenue d'Eylau",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item avenue d'Eylau (Q2873891) for cells containing \"avenue d eylau\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Name_of_the_Street: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Name_of_the_Street",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "place saint andre des arts",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3390073",
+      "name": "place Saint-André-des-Arts",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item place Saint-André-des-Arts (Q3390073) for cells containing \"place saint andre des arts\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Name_of_the_Street: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Name_of_the_Street",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "avenue ledru rollin",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2873739",
+      "name": "avenue Ledru-Rollin",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item avenue Ledru-Rollin (Q2873739) for cells containing \"avenue ledru rollin\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Name_of_the_Street: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Name_of_the_Street",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "place de la concorde",
+    "judgment": "matched",
+    "match": {
+      "id": "Q189503",
+      "name": "place de la Concorde",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item place de la Concorde (Q189503) for cells containing \"place de la concorde\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Name_of_the_Street: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Name_of_the_Street",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "rue emile durkheim",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3452693",
+      "name": "rue Émile-Durkheim",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item rue Émile-Durkheim (Q3452693) for cells containing \"rue emile durkheim\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Name_of_the_Street: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Name_of_the_Street",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "place saint sulpice",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2735858",
+      "name": "place Saint-Sulpice",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item place Saint-Sulpice (Q2735858) for cells containing \"place saint sulpice\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Name_of_the_Street: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Name_of_the_Street",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "boulevard saint germain",
+    "judgment": "matched",
+    "match": {
+      "id": "Q533037",
+      "name": "boulevard Saint-Germain",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item boulevard Saint-Germain (Q533037) for cells containing \"boulevard saint germain\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Name_of_the_Street: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Name_of_the_Street",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "rue francois 1er",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3447973",
+      "name": "rue François-Ier",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item rue François-Ier (Q3447973) for cells containing \"rue francois 1er\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Name_of_the_Street: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Name_of_the_Street",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "rue de la cure",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3451408",
+      "name": "rue de la Cure",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item rue de la Cure (Q3451408) for cells containing \"rue de la cure\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Name_of_the_Street: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Name_of_the_Street",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "rue nungesser et coli",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3449332",
+      "name": "rue Nungesser-et-Coli",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item rue Nungesser-et-Coli (Q3449332) for cells containing \"rue nungesser et coli\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Name_of_the_Street: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Name_of_the_Street",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "rue jacob",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3448385",
+      "name": "rue Jacob",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item rue Jacob (Q3448385) for cells containing \"rue jacob\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Name_of_the_Street: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Name_of_the_Street",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "rue de prony",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3450989",
+      "name": "rue de Prony",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item rue de Prony (Q3450989) for cells containing \"rue de prony\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Name_of_the_Street: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Name_of_the_Street",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "rue gay lussac",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3448100",
+      "name": "rue Gay-Lussac",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item rue Gay-Lussac (Q3448100) for cells containing \"rue gay lussac\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Name_of_the_Street: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Name_of_the_Street",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "passage des recollets",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3368130",
+      "name": "passage des Récollets",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item passage des Récollets (Q3368130) for cells containing \"passage des recollets\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Name_of_the_Street: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Name_of_the_Street",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "quai de bercy",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3412678",
+      "name": "quai de Bercy",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item quai de Bercy (Q3412678) for cells containing \"quai de bercy\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Name_of_the_Street: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Name_of_the_Street",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "avenue du maine",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2874166",
+      "name": "avenue du Maine",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item avenue du Maine (Q2874166) for cells containing \"avenue du maine\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Name_of_the_Street: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Name_of_the_Street",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "rue soufflot",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3450080",
+      "name": "rue Soufflot",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item rue Soufflot (Q3450080) for cells containing \"rue soufflot\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Name_of_the_Street: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Name_of_the_Street",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "rue ambroise pare",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1553727",
+      "name": "rue Ambroise-Paré",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item rue Ambroise-Paré (Q1553727) for cells containing \"rue ambroise pare\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Name_of_the_Street: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Name_of_the_Street",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "avenue de versailles",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2873964",
+      "name": "avenue de Versailles",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item avenue de Versailles (Q2873964) for cells containing \"avenue de versailles\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Name_of_the_Street: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Name_of_the_Street",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "rue daubenton",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3447621",
+      "name": "rue Daubenton",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item rue Daubenton (Q3447621) for cells containing \"rue daubenton\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Name_of_the_Street: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Name_of_the_Street",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "avenue foch",
+    "judgment": "matched",
+    "match": {
+      "id": "Q790562",
+      "name": "avenue Foch",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item avenue Foch (Q790562) for cells containing \"avenue foch\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Name_of_the_Street: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Name_of_the_Street",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "boulevard victor",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2921958",
+      "name": "boulevard Victor",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item boulevard Victor (Q2921958) for cells containing \"boulevard victor\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Name_of_the_Street: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Name_of_the_Street",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "rue carpeaux",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3447324",
+      "name": "rue Carpeaux",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item rue Carpeaux (Q3447324) for cells containing \"rue carpeaux\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Name_of_the_Street: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Name_of_the_Street",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "rue casimir perier",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3447330",
+      "name": "rue Casimir-Perier",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item rue Casimir-Perier (Q3447330) for cells containing \"rue casimir perier\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Name_of_the_Street: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Name_of_the_Street",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "rue du bac",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1470209",
+      "name": "rue du Bac",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item rue du Bac (Q1470209) for cells containing \"rue du bac\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Name_of_the_Street: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Name_of_the_Street",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "place de la bourse",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3390344",
+      "name": "place de la Bourse",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item place de la Bourse (Q3390344) for cells containing \"place de la bourse\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Name_of_the_Street: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Name_of_the_Street",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "rue lobineau",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3448884",
+      "name": "rue Lobineau",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item rue Lobineau (Q3448884) for cells containing \"rue lobineau\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Name_of_the_Street: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Name_of_the_Street",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "rue firmin gemier",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2415506",
+      "name": "rue Firmin-Gémier",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item rue Firmin-Gémier (Q2415506) for cells containing \"rue firmin gemier\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Name_of_the_Street: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Name_of_the_Street",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Name_of_the_Street",
+    "similarValue": "rue saint martin",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1478999",
+      "name": "rue Saint-Martin",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item rue Saint-Martin (Q1478999) for cells containing \"rue saint martin\" in column Name_of_the_Street"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "same_as_wikidata_Name_of_the_street",
+    "description": "Remove column same_as_wikidata_Name_of_the_street"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Name_of_the_Street",
+    "expression": "grel:\"https://wikidata.org/entity/\"+cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "same_as_wikidata_Name_of_the_street",
+    "columnInsertIndex": 4,
+    "description": "Create column same_as_wikidata_Name_of_the_street at index 4 based on column Name_of_the_Street using expression grel:\"https://wikidata.org/entity/\"+cell.recon.match.id"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Type_of_road",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q83620",
+        "name": "thoroughfare"
+      },
+      "autoMatch": true,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column Type_of_road to type Q83620"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Type_of_road: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Type_of_road",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "matched",
+                "l": "matched"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Type_of_road",
+    "similarValue": "avenue",
+    "judgment": "matched",
+    "match": {
+      "id": "Q7543083",
+      "name": "avenue",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item avenue (Q7543083) for cells containing \"avenue\" in column Type_of_road"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Type_of_road: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Type_of_road",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "matched",
+                "l": "matched"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Type_of_road",
+    "similarValue": "square",
+    "judgment": "matched",
+    "match": {
+      "id": "Q174782",
+      "name": "square",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item square (Q174782) for cells containing \"square\" in column Type_of_road"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Type_of_road: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Type_of_road",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Type_of_road",
+    "similarValue": "rue",
+    "judgment": "matched",
+    "match": {
+      "id": "Q79007",
+      "name": "street",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item street (Q79007) for cells containing \"rue\" in column Type_of_road"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Type_of_road: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Type_of_road",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Type_of_road",
+    "similarValue": "avenue",
+    "judgment": "matched",
+    "match": {
+      "id": "Q7543083",
+      "name": "avenue",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item avenue (Q7543083) for cells containing \"avenue\" in column Type_of_road"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Type_of_road: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Type_of_road",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Type_of_road",
+    "similarValue": "place",
+    "judgment": "matched",
+    "match": {
+      "id": "Q98929991",
+      "name": "place",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item place (Q98929991) for cells containing \"place\" in column Type_of_road"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Type_of_road: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Type_of_road",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Type_of_road",
+    "similarValue": "quai",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3543043",
+      "name": "quay",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item quay (Q3543043) for cells containing \"quai\" in column Type_of_road"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Type_of_road: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Type_of_road",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Type_of_road",
+    "similarValue": "square",
+    "judgment": "matched",
+    "match": {
+      "id": "Q174782",
+      "name": "square",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item square (Q174782) for cells containing \"square\" in column Type_of_road"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Type_of_road: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Type_of_road",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Type_of_road",
+    "similarValue": "boulevard",
+    "judgment": "matched",
+    "match": {
+      "id": "Q54114",
+      "name": "boulevard",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item boulevard (Q54114) for cells containing \"boulevard\" in column Type_of_road"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Type_of_road: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Type_of_road",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Type_of_road",
+    "similarValue": "passage",
+    "judgment": "matched",
+    "match": {
+      "id": "Q62059481",
+      "name": "crossing",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item crossing (Q62059481) for cells containing \"passage\" in column Type_of_road"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Type_of_road: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Type_of_road",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Type_of_road",
+    "similarValue": "cours",
+    "judgment": "matched",
+    "match": {
+      "id": "Q16544740",
+      "name": "cours",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item cours (Q16544740) for cells containing \"cours\" in column Type_of_road"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Type_of_road: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Type_of_road",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Type_of_road",
+    "similarValue": "rond point",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1525",
+      "name": "roundabout",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item roundabout (Q1525) for cells containing \"rond point\" in column Type_of_road"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Type_of_road",
+    "expression": "grel:\"https://wikidata.org/entity/\"+cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "same_as_wikidata_Type_of_road",
+    "columnInsertIndex": 6,
+    "description": "Create column same_as_wikidata_Type_of_road at index 6 based on column Type_of_road using expression grel:\"https://wikidata.org/entity/\"+cell.recon.match.id"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "District",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q679388",
+        "name": "municipal arrondissement of Paris"
+      },
+      "autoMatch": true,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column District to type Q679388"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "District",
+    "similarValue": "5",
+    "judgment": "matched",
+    "match": {
+      "id": "Q238723",
+      "name": "5th arrondissement of Paris",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item 5th arrondissement of Paris (Q238723) for cells containing \"5\" in column District"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "District",
+    "similarValue": "17",
+    "judgment": "matched",
+    "match": {
+      "id": "Q197297",
+      "name": "17th arrondissement of Paris",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item 17th arrondissement of Paris (Q197297) for cells containing \"17\" in column District"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "District",
+    "similarValue": "16",
+    "judgment": "matched",
+    "match": {
+      "id": "Q194420",
+      "name": "16th arrondissement of Paris",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item 16th arrondissement of Paris (Q194420) for cells containing \"16\" in column District"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "District",
+    "similarValue": "6",
+    "judgment": "matched",
+    "match": {
+      "id": "Q245546",
+      "name": "6th arrondissement of Paris",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item 6th arrondissement of Paris (Q245546) for cells containing \"6\" in column District"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "District",
+    "similarValue": "14",
+    "judgment": "matched",
+    "match": {
+      "id": "Q187153",
+      "name": "14th arrondissement of Paris",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item 14th arrondissement of Paris (Q187153) for cells containing \"14\" in column District"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "District",
+    "similarValue": "8",
+    "judgment": "matched",
+    "match": {
+      "id": "Q270230",
+      "name": "8th arrondissement of Paris",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item 8th arrondissement of Paris (Q270230) for cells containing \"8\" in column District"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "District",
+    "similarValue": "7",
+    "judgment": "matched",
+    "match": {
+      "id": "Q259463",
+      "name": "7th arrondissement of Paris",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item 7th arrondissement of Paris (Q259463) for cells containing \"7\" in column District"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "District",
+    "similarValue": "1",
+    "judgment": "matched",
+    "match": {
+      "id": "Q161741",
+      "name": "1st arrondissement of Paris",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item 1st arrondissement of Paris (Q161741) for cells containing \"1\" in column District"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "District",
+    "similarValue": "15",
+    "judgment": "matched",
+    "match": {
+      "id": "Q191066",
+      "name": "15th arrondissement of Paris",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item 15th arrondissement of Paris (Q191066) for cells containing \"15\" in column District"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "District",
+    "similarValue": "10",
+    "judgment": "matched",
+    "match": {
+      "id": "Q163948",
+      "name": "10th arrondissement of Paris",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item 10th arrondissement of Paris (Q163948) for cells containing \"10\" in column District"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "District",
+    "similarValue": "12",
+    "judgment": "matched",
+    "match": {
+      "id": "Q171689",
+      "name": "12th arrondissement of Paris",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item 12th arrondissement of Paris (Q171689) for cells containing \"12\" in column District"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "District",
+    "similarValue": "4",
+    "judgment": "matched",
+    "match": {
+      "id": "Q230127",
+      "name": "4th arrondissement of Paris",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item 4th arrondissement of Paris (Q230127) for cells containing \"4\" in column District"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "District",
+    "similarValue": "18",
+    "judgment": "matched",
+    "match": {
+      "id": "Q200126",
+      "name": "18th arrondissement of Paris",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item 18th arrondissement of Paris (Q200126) for cells containing \"18\" in column District"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "District",
+    "similarValue": "11",
+    "judgment": "matched",
+    "match": {
+      "id": "Q169293",
+      "name": "11th arrondissement of Paris",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item 11th arrondissement of Paris (Q169293) for cells containing \"11\" in column District"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "District",
+    "similarValue": "13",
+    "judgment": "matched",
+    "match": {
+      "id": "Q175129",
+      "name": "13th arrondissement of Paris",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item 13th arrondissement of Paris (Q175129) for cells containing \"13\" in column District"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "District",
+    "similarValue": "3",
+    "judgment": "matched",
+    "match": {
+      "id": "Q223140",
+      "name": "3rd arrondissement of Paris",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item 3rd arrondissement of Paris (Q223140) for cells containing \"3\" in column District"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "District",
+    "similarValue": "2",
+    "judgment": "matched",
+    "match": {
+      "id": "Q209549",
+      "name": "2nd arrondissement of Paris",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item 2nd arrondissement of Paris (Q209549) for cells containing \"2\" in column District"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "District",
+    "similarValue": "9",
+    "judgment": "matched",
+    "match": {
+      "id": "Q275118",
+      "name": "9th arrondissement of Paris",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item 9th arrondissement of Paris (Q275118) for cells containing \"9\" in column District"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "District",
+    "similarValue": "19",
+    "judgment": "matched",
+    "match": {
+      "id": "Q204622",
+      "name": "19th arrondissement of Paris",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item 19th arrondissement of Paris (Q204622) for cells containing \"19\" in column District"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "District",
+    "expression": "grel:\"https://wikidata.org/entity/\"+cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "same_as_wikidata_District",
+    "columnInsertIndex": 22,
+    "description": "Create column same_as_wikidata_District at index 22 based on column District using expression grel:\"https://wikidata.org/entity/\"+cell.recon.match.id"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Phone",
+    "expression": "grel:value.replace('?', '-1')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Phone using expression grel:value.replace('?', '-1')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Phone",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Phone using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "MonthlySubBicl",
+    "expression": "value.toString()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column MonthlySubBicl using expression value.toString()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "MonthlySubBicl",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column MonthlySubBicl using expression value.toNumber()"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "same_as_wikidata_Type_of_road",
+    "description": "Remove column same_as_wikidata_Type_of_road"
+  },
+  {
+    "op": "core/recon-discard-judgments",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "District",
+    "clearData": true,
+    "description": "Discard recon judgments and clear recon data for cells in column District"
+  }
+]
